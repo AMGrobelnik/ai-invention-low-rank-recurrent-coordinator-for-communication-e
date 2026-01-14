@@ -1,0 +1,112 @@
+[
+  {
+    "hours_coding": 5.1904757264689225,
+    "coffee_intake_mg": 575,
+    "distractions": 6,
+    "sleep_hours": 7.467748620353512,
+    "commits": 6,
+    "bugs_reported": 1,
+    "ai_usage_hours": 0.7297433185206337,
+    "cognitive_load": 3.6661361829430015,
+    "task_success": 1
+  },
+  {
+    "hours_coding": 3.069862400569812,
+    "coffee_intake_mg": 320,
+    "distractions": 1,
+    "sleep_hours": 6.483702557105956,
+    "commits": 0,
+    "bugs_reported": 2,
+    "ai_usage_hours": 0.0868571350830602,
+    "cognitive_load": 3.44953314443739,
+    "task_success": 0
+  },
+  {
+    "hours_coding": 5.052261633892787,
+    "coffee_intake_mg": 532,
+    "distractions": 3,
+    "sleep_hours": 9.68778398810658,
+    "commits": 9,
+    "bugs_reported": 1,
+    "ai_usage_hours": 0.5144396325964696,
+    "cognitive_load": 1.5092591061867562,
+    "task_success": 1
+  },
+  {
+    "hours_coding": 3.6944410886369554,
+    "coffee_intake_mg": 359,
+    "distractions": 4,
+    "sleep_hours": 8.15004448115302,
+    "commits": 3,
+    "bugs_reported": 0,
+    "ai_usage_hours": 1.226922850150279,
+    "cognitive_load": 4.099178453460044,
+    "task_success": 0
+  },
+  {
+    "hours_coding": 6.883442083652914,
+    "coffee_intake_mg": 601,
+    "distractions": 4,
+    "sleep_hours": 8.902918741274386,
+    "commits": 5,
+    "bugs_reported": 0,
+    "ai_usage_hours": 0.661380249480287,
+    "cognitive_load": 3.7847281639375594,
+    "task_success": 1
+  },
+  {
+    "hours_coding": 5.331725486982553,
+    "coffee_intake_mg": 497,
+    "distractions": 4,
+    "sleep_hours": 7.608979947337988,
+    "commits": 3,
+    "bugs_reported": 2,
+    "ai_usage_hours": 0.8923408079678878,
+    "cognitive_load": 4.272347193412518,
+    "task_success": 1
+  },
+  {
+    "hours_coding": 2.772505947904622,
+    "coffee_intake_mg": 287,
+    "distractions": 3,
+    "sleep_hours": 9.488928921005256,
+    "commits": 5,
+    "bugs_reported": 0,
+    "ai_usage_hours": 0.5986343394493768,
+    "cognitive_load": 3.260075820055172,
+    "task_success": 0
+  },
+  {
+    "hours_coding": 2.2490316784448505,
+    "coffee_intake_mg": 213,
+    "distractions": 2,
+    "sleep_hours": 7.997301917473955,
+    "commits": 1,
+    "bugs_reported": 0,
+    "ai_usage_hours": 0.6748481659199387,
+    "cognitive_load": 3.5658788496492075,
+    "task_success": 0
+  },
+  {
+    "hours_coding": 5.432846091357119,
+    "coffee_intake_mg": 540,
+    "distractions": 6,
+    "sleep_hours": 7.32327097518269,
+    "commits": 6,
+    "bugs_reported": 1,
+    "ai_usage_hours": 0.7547232479178158,
+    "cognitive_load": 3.792893232893875,
+    "task_success": 1
+  },
+  {
+    "hours_coding": 2.1351949457355173,
+    "coffee_intake_mg": 164,
+    "distractions": 1,
+    "sleep_hours": 9.57318680142142,
+    "commits": 2,
+    "bugs_reported": 0,
+    "ai_usage_hours": 1.2543517350149125,
+    "cognitive_load": 3.26682156656086,
+    "task_success": 0
+  }
+]

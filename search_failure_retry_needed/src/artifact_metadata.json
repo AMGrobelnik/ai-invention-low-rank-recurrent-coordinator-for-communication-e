@@ -1,0 +1,4 @@
+{
+  "title": "Search Failure \u2014 Retry Needed",
+  "summary": "Automated web search/fetch tools failed (connection errors), so I could not retrieve the external literature to perform the requested cross\u2011domain survey. I propose either retrying the searches (recommended), analyzing user\u2011provided documents, or producing a provisional internal\u2011knowledge summary. Once you confirm, I will run the full search\u2192fetch\u2192contrast\u2192synthesize process and produce the final, fully\u2011cited JSON report."
+}

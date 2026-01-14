@@ -1,0 +1,65 @@
+{
+  "examples": [
+    {
+      "input": "Objective: Search for \"batteries for iphone 13\"\n\nCurrent State Observation:\nTab 0 (current): One Stop Market\n\n[1] RootWebArea 'One Stop Market' focused: True\n\t[95] link 'My Account'\n\t[96] link 'My Wish List'\n\t[97] link 'Sign Out'\n\t[3838] StaticText 'Welcome to One Stop Market'\n\t[39] link 'Skip to Content'\n\t[23] link 'store logo'\n\t\t[41] img 'one_stop_market_logo'\n\t[42] link '\\ue611 My Cart'\n\t[281] StaticText 'Search'\n\t[172] combobox '\\ue615 Search' autocomplete: both hasPopup: listbox required: False expanded: False\n\t[284] link 'Advanced Search'\n\t[139] button 'Search' di...",
+      "context": {
+        "current_state": "Tab 0 (current): One Stop Market\n\n[1] RootWebArea 'One Stop Market' focused: True\n\t[95] link 'My Account'\n\t[96] link 'My Wish List'\n\t[97] link 'Sign Out'\n\t[3838] StaticText 'Welcome to One Stop Market...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The webpage will now display a search results page tailored specifically for ‘iphone 13’, showcasing relevant products.\n2. Users will see a variety of items, including...",
+        "predicted_next_state": "1. The webpage will be updated to a new RootWebArea titled “Search results for: ‘iphone 13’,” focusing entirely on the search outcomes.\n2. A heading corresponding to the search term used will be promi...",
+        "predicted_gpt4o_mini": "The webpage will update to show search results for “batteries for iphone 13.” This includes:\n1. The RootWebArea will now be focused on displaying the results relevant to the search query.\n2. A new hea...",
+        "predicted_gpt4o": "1. The combobox [172] will show the text \"iphone 13\".\n2. The search button [139] might become enabled if the input validation criteria are met, allowing the user to initiate the search.\n\n[Next State] ...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "num_models_compared": 3,
+        "example_id": 0,
+        "objective": "Search for \"batteries for iphone 13\"",
+        "gold_action": "type [172] [iphone 13] where [172] is combobox '\\ue615 Search' autocomplete: both hasPopup: listbox required: False expanded: False",
+        "url": "http://ec2-3-139-65-91.us-east-2.compute.amazonaws.com:7770"
+      },
+      "output": "The expected effect is that: \n1. The webpage will now display a search results page tailored specifically for ‘iphone 13’, showcasing relevant products.\n2. Users will see a variety of items, including accessories like cases and protectors for the iPhone 13, complete with prices and ratings, allowing them to make informed choices.\n3. The interface will allow users to interact with these products through options to add to cart or wish list, enhancing their shopping experience.\n4. The layout will be more organized and visually focused on the products relevant to the search query, making it easier to navigate through the available options.\n5. The transition from the general homepage to a focused search results page indicates that the user’s input has successfully triggered a relevant and comprehensive display of products related to their query.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project\n\nCurrent State Observation:\nTab 0 (current): Projects · Dashboard · GitLab\n\n[1] RootWebArea 'Projects · Dashboard · GitLab' focused: True\n\t[5] link 'Skip to content'\n\t[18] link 'Dashboard'\n\t[2720] button '' hasPopup: menu expanded: False\n\t[64] textbox 'Search GitLab' required: False\n\t[56] generic 'Use the shortcut key <kbd>/</kbd> to start a search'\n\t[34] link 'Create new...'\n\t[105] link 'Issues'\n\t\t[136] generic '13 assigned issues'\n\t[106] link 'Merge requests'\n\t\t[138] generic '8 merge requests'\n\t[108] link 'To-Do List'\n\t\t...",
+      "context": {
+        "current_state": "Tab 0 (current): Projects · Dashboard · GitLab\n\n[1] RootWebArea 'Projects · Dashboard · GitLab' focused: True\n\t[5] link 'Skip to content'\n\t[18] link 'Dashboard'\n\t[2720] button '' hasPopup: menu expand...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The webpage will now display the search results specific to the AndroidSlidingUpPanel project.\n2. The project will be highlighted with its description, owner, and info...",
+        "predicted_next_state": "The web page will be updated to a new RootWebArea titled “Search results for: ‘AndroidSlidingUpPanel’,” focusing entirely on the search outcomes.\n1. A heading corresponding to the search term will be ...",
+        "predicted_gpt4o_mini": "The webpage will transition to display search results for the term “AndroidSlidingUpPanel.” This includes:\n1. The RootWebArea will be updated to indicate it is now showing results for the search term ...",
+        "predicted_gpt4o": "1. The webpage will be updated to a new RootWebArea titled \"Search results for: 'AndroidSlidingUpPanel',\" focusing on the search outcomes.\n2. A heading corresponding to the search term used will be pr...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "num_models_compared": 3,
+        "example_id": 1,
+        "objective": "Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project",
+        "gold_action": "type [64] [AndroidSlidingUpPanel] where [64] is textbox 'Search GitLab' required: False",
+        "url": "http://ec2-3-139-65-91.us-east-2.compute.amazonaws.com:8023"
+      },
+      "output": "The expected effect is that: \n1. The webpage will now display the search results specific to the AndroidSlidingUpPanel project.\n2. The project will be highlighted with its description, owner, and information about contributions.\n3. Users will be able to see details about the contributors, including the number of commits made to the project, facilitating the identification of the person with the most contributions.\n4. The interface will provide navigational links to further explore the project’s issues, merge requests, and additional statistics related to contributions, allowing for a comprehensive understanding of the project’s activity and contributors.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project\n\nCurrent State Observation:\nTab 0 (current): AndroidSlidingUpPanel · Search · GitLab\n\n[2991] RootWebArea 'AndroidSlidingUpPanel · Search · GitLab' focused: True\n\t[2995] link 'Skip to content'\n\t[3008] link 'Dashboard'\n\t[3500] button '' hasPopup: menu expanded: False\n\t[3024] link 'Create new...'\n\t[3026] link 'Issues'\n\t\t[3120] generic '13 assigned issues'\n\t[3108] link 'Merge requests'\n\t\t[3122] generic '8 merge requests'\n\t[3110] link 'To-Do List'\n\t\t[3126] generic 'Todos count'\n\t\t\t[3149] StaticText '5'\n\t[3111] link 'Help'\n\t[311...",
+      "context": {
+        "current_state": "Tab 0 (current): AndroidSlidingUpPanel · Search · GitLab\n\n[2991] RootWebArea 'AndroidSlidingUpPanel · Search · GitLab' focused: True\n\t[2995] link 'Skip to content'\n\t[3008] link 'Dashboard'\n\t[3500] but...",
+        "ground_truth_next_state": "The expected effect is that:\n1. The webpage is now focused on the ‘Umano: News Read To You / AndroidSlidingUpPanel’ project, providing a detailed overview of the project’s contributions and structure....",
+        "predicted_next_state": "1. The webpage will now display a RootWebArea titled “Contributors to AndroidSlidingUpPanel”, focusing on the contributions made to the project.\n2. A heading will indicate that there are 55 contributo...",
+        "predicted_gpt4o_mini": "The webpage will transition to display the user profile for the contributor linked from the search results. This will include:\n1. A new RootWebArea titled with the user's name or identifier, focusing ...",
+        "predicted_gpt4o": "1. The webpage will transition to a detailed view of the \"AndroidSlidingUpPanel\" project.\n2. A new RootWebArea will be present with a title indicating it is focused on the \"AndroidSlidingUpPanel\" proj...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "num_models_compared": 3,
+        "example_id": 2,
+        "objective": "Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project",
+        "gold_action": "click [3243] where [3243] is link 'A'",
+        "url": "http://ec2-3-139-65-91.us-east-2.compute.amazonaws.com:8023/search?search=AndroidSlidingUpPanel&snippets=&repository_ref=&nav_source=navbar",
+        "num_previous_actions": 1
+      },
+      "output": "The expected effect is that:\n1. The webpage is now focused on the ‘Umano: News Read To You / AndroidSlidingUpPanel’ project, providing a detailed overview of the project’s contributions and structure.\n2. Users can see the project's purpose clearly, with tools available for searching within the project and engaging with its contents.\n3. Commit statistics and project ID details provide the user with relevant metrics and identification for the project, which are useful for understanding its development status.\n4. The presence of interaction buttons for 'Forking' and 'Starring' the project enhances the community engagement aspects of the repository.\n5. The newly organized file structure allows users to easily navigate and find critical information about the project, such as documentation and licenses, essential for contributors and users alike.\n6. The note about not actively responding to issues informs users about the level of support they can expect, which is crucial for managing expectations regarding project contributions and inquiries. \n\nOverall, the user will now have a clearer understanding of the AndroidSlidingUpPanel project, particularly in terms of contributions and project activity.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    }
+  ]
+}

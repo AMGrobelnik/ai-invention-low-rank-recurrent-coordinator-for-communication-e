@@ -1,0 +1,1 @@
+Proof of Rank‑Bound on Recurrent Coordinator State

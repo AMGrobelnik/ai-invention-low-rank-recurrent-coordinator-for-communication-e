@@ -1,0 +1,22 @@
+{
+  "examples": [
+    {
+      "input": "What is the difference between OpenCL and CUDA?",
+      "output": "Winner: model_b",
+      "dataset": "lmsys/chatbot_arena_conversations",
+      "split": "train"
+    },
+    {
+      "input": "Why did my parent not invite me to their wedding?",
+      "output": "Winner: tie",
+      "dataset": "lmsys/chatbot_arena_conversations",
+      "split": "train"
+    },
+    {
+      "input": "Fuji vs. Nikon, which is better?",
+      "output": "Winner: model_b",
+      "dataset": "lmsys/chatbot_arena_conversations",
+      "split": "train"
+    }
+  ]
+}

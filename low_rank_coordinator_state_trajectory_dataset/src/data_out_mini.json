@@ -1,0 +1,358 @@
+{
+  "examples": [
+    {
+      "input": "Coordination task: object_delivery\nAgents: carrier, navigator",
+      "context": {
+        "agents": [
+          "carrier",
+          "navigator"
+        ],
+        "task_type": "object_delivery",
+        "dataset_type": "multi_agent_interaction",
+        "humanoid_ready": true,
+        "num_agents": 2
+      },
+      "output": "Outcome: success",
+      "dataset": "achiepatricia/han-multi-agent-interaction-dataset-v1",
+      "split": "train"
+    },
+    {
+      "input": "Coordination task: area_analysis\nAgents: scanner, planner",
+      "context": {
+        "agents": [
+          "scanner",
+          "planner"
+        ],
+        "task_type": "area_analysis",
+        "dataset_type": "multi_agent_interaction",
+        "humanoid_ready": true,
+        "num_agents": 2
+      },
+      "output": "Outcome: success",
+      "dataset": "achiepatricia/han-multi-agent-interaction-dataset-v1",
+      "split": "train"
+    },
+    {
+      "input": "Coordination task: heavy_lift\nAgents: loader, carrier",
+      "context": {
+        "agents": [
+          "loader",
+          "carrier"
+        ],
+        "task_type": "heavy_lift",
+        "dataset_type": "multi_agent_interaction",
+        "humanoid_ready": true,
+        "num_agents": 2
+      },
+      "output": "Outcome: assisted",
+      "dataset": "achiepatricia/han-multi-agent-interaction-dataset-v1",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Search for \"batteries for iphone 13\"\n\nCurrent State Observation:\nTab 0 (current): One Stop Market\n\n[1] RootWebArea 'One Stop Market' focused: True\n\t[95] link 'My Account'\n\t[96] link 'My Wish List'\n\t[97] link 'Sign Out'\n\t[3838] StaticText 'Welcome to One Stop Market'\n\t[39] link 'Skip to Content'\n\t[23] link 'store logo'\n\t\t[41] img 'one_stop_market_logo'\n\t[42] link '\\ue611 My Cart'\n\t[281] StaticText 'Search'\n\t[172] combobox '\\ue615 Search' autocomplete: both hasPopup: listbox required: False expanded: False\n\t[284] link 'Advanced Search'\n\t[139] button 'Search' di...",
+      "context": {
+        "current_state": "Tab 0 (current): One Stop Market\n\n[1] RootWebArea 'One Stop Market' focused: True\n\t[95] link 'My Account'\n\t[96] link 'My Wish List'\n\t[97] link 'Sign Out'\n\t[3838] StaticText 'Welcome to One Stop Market...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The webpage will now display a search results page tailored specifically for ‘iphone 13’, showcasing relevant products.\n2. Users will see a variety of items, including...",
+        "predicted_next_state": "1. The webpage will be updated to a new RootWebArea titled “Search results for: ‘iphone 13’,” focusing entirely on the search outcomes.\n2. A heading corresponding to the search term used will be promi...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The webpage will update to show search results for “batteries for iphone 13.” This includes:\n1. The RootWebArea will now be focused on displaying the results relevant to the search query.\n2. A new hea...",
+        "predicted_gpt4o": "1. The combobox [172] will show the text \"iphone 13\".\n2. The search button [139] might become enabled if the input validation criteria are met, allowing the user to initiate the search.\n\n[Next State] ...",
+        "num_models_compared": 3,
+        "objective": "Search for \"batteries for iphone 13\"",
+        "gold_action": "type [172] [iphone 13] where [172] is combobox '\\ue615 Search' autocomplete: both hasPopup: listbox required: False expanded: False"
+      },
+      "output": "The expected effect is that: \n1. The webpage will now display a search results page tailored specifically for ‘iphone 13’, showcasing relevant products.\n2. Users will see a variety of items, including accessories like cases and protectors for the iPhone 13, complete with prices and ratings, allowing them to make informed choices.\n3. The interface will allow users to interact with these products through options to add to cart or wish list, enhancing their shopping experience.\n4. The layout will be more organized and visually focused on the products relevant to the search query, making it easier to navigate through the available options.\n5. The transition from the general homepage to a focused search results page indicates that the user’s input has successfully triggered a relevant and comprehensive display of products related to their query.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project\n\nCurrent State Observation:\nTab 0 (current): Projects · Dashboard · GitLab\n\n[1] RootWebArea 'Projects · Dashboard · GitLab' focused: True\n\t[5] link 'Skip to content'\n\t[18] link 'Dashboard'\n\t[2720] button '' hasPopup: menu expanded: False\n\t[64] textbox 'Search GitLab' required: False\n\t[56] generic 'Use the shortcut key <kbd>/</kbd> to start a search'\n\t[34] link 'Create new...'\n\t[105] link 'Issues'\n\t\t[136] generic '13 assigned issues'\n\t[106] link 'Merge requests'\n\t\t[138] generic '8 merge requests'\n\t[108] link 'To-Do List'\n\t\t...",
+      "context": {
+        "current_state": "Tab 0 (current): Projects · Dashboard · GitLab\n\n[1] RootWebArea 'Projects · Dashboard · GitLab' focused: True\n\t[5] link 'Skip to content'\n\t[18] link 'Dashboard'\n\t[2720] button '' hasPopup: menu expand...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The webpage will now display the search results specific to the AndroidSlidingUpPanel project.\n2. The project will be highlighted with its description, owner, and info...",
+        "predicted_next_state": "The web page will be updated to a new RootWebArea titled “Search results for: ‘AndroidSlidingUpPanel’,” focusing entirely on the search outcomes.\n1. A heading corresponding to the search term will be ...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The webpage will transition to display search results for the term “AndroidSlidingUpPanel.” This includes:\n1. The RootWebArea will be updated to indicate it is now showing results for the search term ...",
+        "predicted_gpt4o": "1. The webpage will be updated to a new RootWebArea titled \"Search results for: 'AndroidSlidingUpPanel',\" focusing on the search outcomes.\n2. A heading corresponding to the search term used will be pr...",
+        "num_models_compared": 3,
+        "objective": "Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project",
+        "gold_action": "type [64] [AndroidSlidingUpPanel] where [64] is textbox 'Search GitLab' required: False"
+      },
+      "output": "The expected effect is that: \n1. The webpage will now display the search results specific to the AndroidSlidingUpPanel project.\n2. The project will be highlighted with its description, owner, and information about contributions.\n3. Users will be able to see details about the contributors, including the number of commits made to the project, facilitating the identification of the person with the most contributions.\n4. The interface will provide navigational links to further explore the project’s issues, merge requests, and additional statistics related to contributions, allowing for a comprehensive understanding of the project’s activity and contributors.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project\n\nCurrent State Observation:\nTab 0 (current): AndroidSlidingUpPanel · Search · GitLab\n\n[2991] RootWebArea 'AndroidSlidingUpPanel · Search · GitLab' focused: True\n\t[2995] link 'Skip to content'\n\t[3008] link 'Dashboard'\n\t[3500] button '' hasPopup: menu expanded: False\n\t[3024] link 'Create new...'\n\t[3026] link 'Issues'\n\t\t[3120] generic '13 assigned issues'\n\t[3108] link 'Merge requests'\n\t\t[3122] generic '8 merge requests'\n\t[3110] link 'To-Do List'\n\t\t[3126] generic 'Todos count'\n\t\t\t[3149] StaticText '5'\n\t[3111] link 'Help'\n\t[311...",
+      "context": {
+        "current_state": "Tab 0 (current): AndroidSlidingUpPanel · Search · GitLab\n\n[2991] RootWebArea 'AndroidSlidingUpPanel · Search · GitLab' focused: True\n\t[2995] link 'Skip to content'\n\t[3008] link 'Dashboard'\n\t[3500] but...",
+        "ground_truth_next_state": "The expected effect is that:\n1. The webpage is now focused on the ‘Umano: News Read To You / AndroidSlidingUpPanel’ project, providing a detailed overview of the project’s contributions and structure....",
+        "predicted_next_state": "1. The webpage will now display a RootWebArea titled “Contributors to AndroidSlidingUpPanel”, focusing on the contributions made to the project.\n2. A heading will indicate that there are 55 contributo...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The webpage will transition to display the user profile for the contributor linked from the search results. This will include:\n1. A new RootWebArea titled with the user's name or identifier, focusing ...",
+        "predicted_gpt4o": "1. The webpage will transition to a detailed view of the \"AndroidSlidingUpPanel\" project.\n2. A new RootWebArea will be present with a title indicating it is focused on the \"AndroidSlidingUpPanel\" proj...",
+        "num_models_compared": 3,
+        "objective": "Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project",
+        "gold_action": "click [3243] where [3243] is link 'A'"
+      },
+      "output": "The expected effect is that:\n1. The webpage is now focused on the ‘Umano: News Read To You / AndroidSlidingUpPanel’ project, providing a detailed overview of the project’s contributions and structure.\n2. Users can see the project's purpose clearly, with tools available for searching within the project and engaging with its contents.\n3. Commit statistics and project ID details provide the user with relevant metrics and identification for the project, which are useful for understanding its development status.\n4. The presence of interaction buttons for 'Forking' and 'Starring' the project enhances the community engagement aspects of the repository.\n5. The newly organized file structure allows users to easily navigate and find critical information about the project, such as documentation and licenses, essential for contributors and users alike.\n6. The note about not actively responding to issues informs users about the level of support they can expect, which is crucial for managing expectations regarding project contributions and inquiries. \n\nOverall, the user will now have a clearer understanding of the AndroidSlidingUpPanel project, particularly in terms of contributions and project activity.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project\n\nCurrent State Observation:\nTab 0 (current): Umano: News Read To You / AndroidSlidingUpPanel · GitLab\n\n[3662] RootWebArea 'Umano: News Read To You / AndroidSlidingUpPanel · GitLab' focused: True\n\t[3666] link 'Skip to content'\n\t[3673] link 'Dashboard'\n\t[4795] button '' hasPopup: menu expanded: False\n\t[4182] textbox 'Search GitLab' required: False\n\t[4036] generic 'Use the shortcut key <kbd>/</kbd> to start a search'\n\t[3800] link 'Create new...'\n\t[3802] link 'Issues'\n\t\t[3923] generic '13 assigned issues'\n\t[3803] link 'Merge r...",
+      "context": {
+        "current_state": "Tab 0 (current): Umano: News Read To You / AndroidSlidingUpPanel · GitLab\n\n[3662] RootWebArea 'Umano: News Read To You / AndroidSlidingUpPanel · GitLab' focused: True\n\t[3666] link 'Skip to content'\n\t[...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The webpage will display a detailed view of the repository for the AndroidSlidingUpPanel project, allowing users to explore files and commit history.\n2. Users will see...",
+        "predicted_next_state": "The web page will transition to a detailed view of the AndroidSlidingUpPanel repository, showcasing the following information:\n1. The RootWebArea will have a title reflecting the repository name, conf...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The web page will transition to display the repository details for the AndroidSlidingUpPanel project. This includes:\n1. A new RootWebArea focused on the repository, with headings and static text that ...",
+        "predicted_gpt4o": "1. The webpage will update to a new RootWebArea titled “Repository - AndroidSlidingUpPanel · GitLab,” focusing on the repository's main page.\n2. A heading for the repository’s main page will be promin...",
+        "num_models_compared": 3,
+        "objective": "Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project",
+        "gold_action": "click [3748] where [3748] is link 'Repository'"
+      },
+      "output": "The expected effect is that: \n1. The webpage will display a detailed view of the repository for the AndroidSlidingUpPanel project, allowing users to explore files and commit history.\n2. Users will see a list of commits, including the latest contributions, which will help in identifying the author with the most commits.\n3. The repository will show the number of commits, branches, and merge requests, allowing for insights into project activity and contributions.\n4. The updated layout will facilitate navigation through different sections like issues and merge requests, enhancing user experience while searching for contribution details.\n5. Users can now find the specific contributor with the highest number of commits by examining the commit history and author data presented on the page.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project\n\nCurrent State Observation:\nTab 0 (current): Files · master · Umano: News Read To You / AndroidSlidingUpPanel · GitLab\n\n[7382] RootWebArea 'Files · master · Umano: News Read To You / AndroidSlidingUpPanel · GitLab' focused: True\n\t[7386] link 'Skip to content'\n\t[7393] link 'Dashboard'\n\t[8546] button '' hasPopup: menu expanded: False\n\t[7857] textbox 'Search GitLab' required: False\n\t[7722] generic 'Use the shortcut key <kbd>/</kbd> to start a search'\n\t[7509] link 'Create new...'\n\t[7511] link 'Issues'\n\t\t[7624] generic '13 assi...",
+      "context": {
+        "current_state": "Tab 0 (current): Files · master · Umano: News Read To You / AndroidSlidingUpPanel · GitLab\n\n[7382] RootWebArea 'Files · master · Umano: News Read To You / AndroidSlidingUpPanel · GitLab' focused: True...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The webpage will clearly show a list of contributors to the AndroidSlidingUpPanel project, allowing users to see who has contributed the most.\n2. The name 'tokudu' wil...",
+        "predicted_next_state": "The web page will now display detailed information about the contributors to the AndroidSlidingUpPanel project. This includes:\n1. A RootWebArea with the title reflecting the contributors section, alon...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The webpage will update to display a new RootWebArea titled \"Contributors\" or something similar, focused on the contributors to the AndroidSlidingUpPanel project. This section will include:\n1. A headi...",
+        "predicted_gpt4o": "The webpage will transition to display the contributors to the \"AndroidSlidingUpPanel\" project. This includes:\n1. A RootWebArea titled \"Contributors · Umano: News Read To You / AndroidSlidingUpPanel ·...",
+        "num_models_compared": 3,
+        "objective": "Tell me who has made the most contributions, in terms of number of commits, to the AndroidSlidingUpPanel project",
+        "gold_action": "click [7656] where [7656] is link 'Contributors'"
+      },
+      "output": "The expected effect is that: \n1. The webpage will clearly show a list of contributors to the AndroidSlidingUpPanel project, allowing users to see who has contributed the most.\n2. The name 'tokudu' will be highlighted as the contributor with the highest number of commits, specifically '150 commits', making it clear who has made the most contributions.\n3. The additional contributors will be listed in descending order of their commit counts, providing a clear hierarchy of contributions.\n4. The overall context of the project and its contributors is now focused, allowing users to navigate easily to understand contributions within the GitLab repository. \n5. This structured presentation will facilitate the user's objective of identifying the top contributor efficiently.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: List the name of the top 3 contributors to prime/design repo, ranked by the number of commits?\n\nCurrent State Observation:\nTab 0 (current): Projects · Dashboard · GitLab\n\n[1] RootWebArea 'Projects · Dashboard · GitLab' focused: True\n\t[5] link 'Skip to content'\n\t[18] link 'Dashboard'\n\t[2491] button '' hasPopup: menu expanded: False\n\t[64] textbox 'Search GitLab' required: False\n\t[56] generic 'Use the shortcut key <kbd>/</kbd> to start a search'\n\t[34] link 'Create new...'\n\t[103] link 'Issues'\n\t\t[135] generic '12 assigned issues'\n\t[104] link 'Merge requests'\n\t\t[137] generic '8 merge requests'\n\t[106] link 'To-Do List'\n\t\t...",
+      "context": {
+        "current_state": "Tab 0 (current): Projects · Dashboard · GitLab\n\n[1] RootWebArea 'Projects · Dashboard · GitLab' focused: True\n\t[5] link 'Skip to content'\n\t[18] link 'Dashboard'\n\t[2491] button '' hasPopup: menu expand...",
+        "ground_truth_next_state": "The expected effect is that:\n1. The webpage will now prominently display the search results specifically for the \"prime / design\" project, indicating that the user is in the right context for their ob...",
+        "predicted_next_state": "The webpage will be updated to a new RootWebArea titled “Search results for: ‘prime / design’,” focusing on projects related to the search query. \n1. A heading corresponding to the search term will be...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The webpage will transition to display the search results for “prime/design.” This includes:\n1. A RootWebArea that reflects the search results for the term “prime/design,” indicating that the search w...",
+        "predicted_gpt4o": "1. The webpage will be updated to a new RootWebArea titled “Search results for: ‘prime / design’,” focusing entirely on the search outcomes.\n2. A heading corresponding to the search term used will be ...",
+        "num_models_compared": 3,
+        "objective": "List the name of the top 3 contributors to prime/design repo, ranked by the number of commits?",
+        "gold_action": "type [64] [prime / design] where [64] is textbox 'Search GitLab' required: False"
+      },
+      "output": "The expected effect is that:\n1. The webpage will now prominently display the search results specifically for the \"prime / design\" project, indicating that the user is in the right context for their objective.\n2. The project details for 'Primer / design' will be accessible, including its guidelines and other pertinent information.\n3. The user will be able to view and navigate through merge requests, issues, and other items directly associated with the project.\n4. The project being public allows users to access it without authentication, facilitating broader participation and contributions.\n5. The interface will reflect updated timestamps and activity, allowing users to quickly assess the project's recency and engagement.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: List the name of the top 3 contributors to prime/design repo, ranked by the number of commits?\n\nCurrent State Observation:\nTab 0 (current): prime / design · Search · GitLab\n\n[2762] RootWebArea 'prime / design · Search · GitLab' focused: True\n\t[2766] link 'Skip to content'\n\t[2779] link 'Dashboard'\n\t[3360] button '' hasPopup: menu expanded: False\n\t[2795] link 'Create new...'\n\t[2797] link 'Issues'\n\t\t[2891] generic '12 assigned issues'\n\t[2879] link 'Merge requests'\n\t\t[2893] generic '8 merge requests'\n\t[2881] link 'To-Do List'\n\t\t[2897] generic 'Todos count'\n\t\t\t[2920] StaticText '5'\n\t[2882] link 'Help'\n\t[2884] link 'Byte ...",
+      "context": {
+        "current_state": "Tab 0 (current): prime / design · Search · GitLab\n\n[2762] RootWebArea 'prime / design · Search · GitLab' focused: True\n\t[2766] link 'Skip to content'\n\t[2779] link 'Dashboard'\n\t[3360] button '' hasPopu...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The webpage will now present detailed information about the ‘Primer / design’ project, including the total number of commits (921) and branches (38).\n2. Users will see...",
+        "predicted_next_state": "The webpage will transition to display information about the user 'D', likely focusing on their contributions to the 'prime / design' repository. This includes:\n1. A RootWebArea titled “D” will indica...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The webpage will transition to display a new RootWebArea focused on the contributors to the \"prime/design\" repository. This will include:\n1. A heading that indicates it is showing the top contributors...",
+        "predicted_gpt4o": "1. The webpage will transition to display the \"Donne Martin / system-design-primer\" repository page.\n2. The RootWebArea will have a new title reflecting the repository's name.\n3. New headings and sect...",
+        "num_models_compared": 3,
+        "objective": "List the name of the top 3 contributors to prime/design repo, ranked by the number of commits?",
+        "gold_action": "click [3023] where [3023] is link 'D'"
+      },
+      "output": "The expected effect is that: \n1. The webpage will now present detailed information about the ‘Primer / design’ project, including the total number of commits (921) and branches (38).\n2. Users will see a list of recent commits and their authors, allowing for easy identification of top contributors based on commit activity.\n3. The interface will feature buttons for actions such as cloning the repository, downloading files, and navigating to related project sections, facilitating user interaction.\n4. A structured overview of files, directories, and their last updates will help in understanding the project’s current state and contributions.\n5. Contributors can quickly identify key authors based on the commit history, which is essential for ranking contributors by the number of commits.\n6. Overall, the page will provide a streamlined, focused view on the project, enhancing accessibility to critical project data and fostering community engagement.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: List the name of the top 3 contributors to prime/design repo, ranked by the number of commits?\n\nCurrent State Observation:\nTab 0 (current): Primer / design · GitLab\n\n[3526] RootWebArea 'Primer / design · GitLab' focused: True\n\t[3530] link 'Skip to content'\n\t[3537] link 'Dashboard'\n\t[4782] button '' hasPopup: menu expanded: False\n\t[4106] textbox 'Search GitLab' required: False\n\t[3942] generic 'Use the shortcut key <kbd>/</kbd> to start a search'\n\t[3677] link 'Create new...'\n\t[3679] link 'Issues'\n\t\t[3815] generic '12 assigned issues'\n\t[3680] link 'Merge requests'\n\t\t[3817] generic '8 merge requests'\n\t[3682] link 'To-Do...",
+      "context": {
+        "current_state": "Tab 0 (current): Primer / design · GitLab\n\n[3526] RootWebArea 'Primer / design · GitLab' focused: True\n\t[3530] link 'Skip to content'\n\t[3537] link 'Dashboard'\n\t[4782] button '' hasPopup: menu expanded...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The user will see a detailed list of commits made to the Primer/design repository, allowing them to analyze the contributions of different authors.\n2. The interface wi...",
+        "predicted_next_state": "The web page will transition to display a detailed view of the commit history for the \"Primer / design\" repository, including:\n1. A heading indicating the total number of commits (921) along with a re...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The webpage will transition to a new RootWebArea that displays the commit history for the \"Primer / design\" repository. This will include:\n1. A prominent heading indicating \"Commit History\" or similar...",
+        "predicted_gpt4o": "The webpage will transition to display the commit history for the \"primer/design\" repository. This includes:\n1. A new RootWebArea titled something like \"Commits · primer/design · GitLab,\" focusing on ...",
+        "num_models_compared": 3,
+        "objective": "List the name of the top 3 contributors to prime/design repo, ranked by the number of commits?",
+        "gold_action": "click [4603] where [4603] is link '921 Commits'"
+      },
+      "output": "The expected effect is that: \n1. The user will see a detailed list of commits made to the Primer/design repository, allowing them to analyze the contributions of different authors.\n2. The interface will allow users to navigate through different commits, view commit messages, and recognize the authors of those commits.\n3. To identify the top 3 contributors ranked by the number of commits, the user will need to analyze the commit history, focusing on the frequency of contributions from each author as displayed in the list.\n4. The page provides a clearer focus on the contributors, enhancing the ability to gather information about their contributions to the project, thus assisting in fulfilling the user's objective. \n5. Once the user identifies the contributors based on the commit counts, they can list the names accordingly.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: List the name of the top 3 contributors to prime/design repo, ranked by the number of commits?\n\nCurrent State Observation:\nTab 0 (current): Commits · main · Primer / design · GitLab\n\n[6851] RootWebArea 'Commits · main · Primer / design · GitLab' focused: True\n\t[6855] link 'Skip to content'\n\t[6866] link 'Dashboard'\n\t[10134] button '' hasPopup: menu expanded: False\n\t[6899] textbox 'Search GitLab' required: False\n\t[7246] generic 'Use the shortcut key <kbd>/</kbd> to start a search'\n\t[7011] link 'Create new...'\n\t[7013] link 'Issues'\n\t\t[7128] generic '12 assigned issues'\n\t[7014] link 'Merge requests'\n\t\t[7130] generic '8 ...",
+      "context": {
+        "current_state": "Tab 0 (current): Commits · main · Primer / design · GitLab\n\n[6851] RootWebArea 'Commits · main · Primer / design · GitLab' focused: True\n\t[6855] link 'Skip to content'\n\t[6866] link 'Dashboard'\n\t[10134...",
+        "ground_truth_next_state": "The expected effect is that:\n1. The webpage now presents a list of contributors to the 'prime/design' repository, focusing on their commit counts.\n2. The top three contributors based on the number of ...",
+        "predicted_next_state": "The webpage will now display a list of contributors to the \"prime/design\" repository, including:\n1. The title 'Contributors · Primer / design · GitLab' will be displayed, indicating the focus on contr...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The web page will transition to display the contributors to the \"prime/design\" repository. This includes:\n1. A new RootWebArea titled \"Contributors\" that focuses on the contributor statistics for the ...",
+        "predicted_gpt4o": "The expected effect is that:\n1. The webpage will transition to a new RootWebArea titled something akin to \"Contributors · Primer / design · GitLab,\" focusing on the list of contributors.\n2. A prominen...",
+        "num_models_compared": 3,
+        "objective": "List the name of the top 3 contributors to prime/design repo, ranked by the number of commits?",
+        "gold_action": "click [7160] where [7160] is link 'Contributors'"
+      },
+      "output": "The expected effect is that:\n1. The webpage now presents a list of contributors to the 'prime/design' repository, focusing on their commit counts.\n2. The top three contributors based on the number of commits are: \n   - Shawn Allen with 95 commits,\n   - Inayaili León with 77 commits,\n   - Aurora Pleguezuelo with 66 commits.\n3. Each contributor's name is clickable, potentially allowing users to view more details about their contributions.\n4. The overall layout emphasizes contributor statistics, making it clear who the most active contributors are in terms of code commits.\n5. The interface may also provide options to view commit history for each contributor, enhancing user engagement with the repository's activity.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Preview the Magento Blank theme for my shop\n\nCurrent State Observation:\nTab 0 (current): Dashboard / Magento Admin\n\n[1] RootWebArea 'Dashboard / Magento Admin' focused: True\n\t[53] link 'Magento Admin Panel'\n\t\t[61] img 'Magento Admin Panel'\n\t[6] menubar '' orientation: horizontal\n\t\t[8] link '\\ue604 DASHBOARD'\n\t\t[12] link '\\ue60b SALES'\n\t\t[16] link '\\ue608 CATALOG'\n\t\t[20] link '\\ue603 CUSTOMERS'\n\t\t[24] link '\\ue609 MARKETING'\n\t\t[28] link '\\ue602 CONTENT'\n\t\t[32] link '\\ue60a REPORTS'\n\t\t[36] link '\\ue60d STORES'\n\t\t[40] link '\\ue610 SYSTEM'\n\t\t[44] link '\\ue612 FIND PARTN...",
+      "context": {
+        "current_state": "Tab 0 (current): Dashboard / Magento Admin\n\n[1] RootWebArea 'Dashboard / Magento Admin' focused: True\n\t[53] link 'Magento Admin Panel'\n\t\t[61] img 'Magento Admin Panel'\n\t[6] menubar '' orientation: hor...",
+        "ground_truth_next_state": "The expected effect is that:\n1. The user will now see a detailed view of the 'CONTENT' section in the Magento Admin Dashboard, providing multiple options to manage different types of content on the si...",
+        "predicted_next_state": "The web page will now display the 'CONTENT' section of the Magento admin panel, with a focus on managing content and themes for the shop. This includes:\n1. A RootWebArea with the title 'Content', indi...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The web page will transition to a new RootWebArea titled \"Content,\" which will focus on content management features within the Magento Admin. \n1. A new heading will indicate the content management sec...",
+        "predicted_gpt4o": "1. The webpage will update to a new RootWebArea titled \"Content / Magento Admin,\" focusing on content management.\n2. A heading for the content management section will be prominent at the top.\n3. Links...",
+        "num_models_compared": 3,
+        "objective": "Preview the Magento Blank theme for my shop",
+        "gold_action": "click [28] where [28] is link '\\ue602 CONTENT'"
+      },
+      "output": "The expected effect is that:\n1. The user will now see a detailed view of the 'CONTENT' section in the Magento Admin Dashboard, providing multiple options to manage different types of content on the site.\n2. The focused state of the 'CONTENT' link will confirm to the user that they are currently in the right section for content management tasks.\n3. The vertical orientation of the menu will allow for a streamlined navigation experience within the 'CONTENT' section, facilitating easier access to the various management tools available.\n4. Overall, the user will be one step closer to previewing and customizing the Magento Blank theme for their shop, as they can now navigate through the relevant content management options.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Preview the Magento Blank theme for my shop\n\nCurrent State Observation:\nTab 0 (current): Dashboard / Magento Admin\n\n[1] RootWebArea 'Dashboard / Magento Admin' focused: True\n\t[53] link 'Magento Admin Panel'\n\t\t[61] img 'Magento Admin Panel'\n\t[6] menubar '' orientation: horizontal\n\t\t[8] link '\\ue604 DASHBOARD'\n\t\t[12] link '\\ue60b SALES'\n\t\t[16] link '\\ue608 CATALOG'\n\t\t[20] link '\\ue603 CUSTOMERS'\n\t\t[24] link '\\ue609 MARKETING'\n\t\t[28] link '\\ue602 CONTENT' focused: True\n\t\t[75] generic '\\ue602 CONTENT Content \\ue62f Elements Pages Blocks Widgets Templates Media Media Gal...",
+      "context": {
+        "current_state": "Tab 0 (current): Dashboard / Magento Admin\n\n[1] RootWebArea 'Dashboard / Magento Admin' focused: True\n\t[53] link 'Magento Admin Panel'\n\t\t[61] img 'Magento Admin Panel'\n\t[6] menubar '' orientation: hor...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The webpage will now display a focused theme management interface, specifically tailored towards viewing and managing themes in Magento.\n2. The previous navigation lin...",
+        "predicted_next_state": "The web page will now display the theme management section, specifically for the \"Themes\" area, with the following features:\n1. The RootWebArea will have a title \"Themes,\" indicating the current secti...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The web page will transition to display the \"Themes\" management interface. This includes:\n1. A RootWebArea with a new title indicating the focus on \"Themes.\"\n2. A heading that clearly states \"Themes\" ...",
+        "predicted_gpt4o": "The expected effect is that the webpage will transition to the themes management interface. This includes:\n1. A RootWebArea titled \"Themes / Magento Admin\" focused on the themes section.\n2. A heading ...",
+        "num_models_compared": 3,
+        "objective": "Preview the Magento Blank theme for my shop",
+        "gold_action": "click [458] where [458] is link 'Themes'"
+      },
+      "output": "The expected effect is that: \n1. The webpage will now display a focused theme management interface, specifically tailored towards viewing and managing themes in Magento.\n2. The previous navigation links related to the dashboard have been replaced or removed, reflecting a more streamlined view focused on themes.\n3. Users will now see a grid displaying available themes, including 'Magento Blank' and 'Magento Luma', with options to view the themes, facilitating the preview of the Magento Blank theme for the user's shop.\n4. The interface will allow an easy transition to view different themes, enhancing the user's ability to manage the design aspect of their online store effectively.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Preview the Magento Blank theme for my shop\n\nCurrent State Observation:\nTab 0 (current): Design / Content / Magento Admin\n\n[1275] RootWebArea 'Design / Content / Magento Admin' focused: True\n\t[1328] link 'Magento Admin Panel'\n\t\t[1336] img 'Magento Admin Panel'\n\t[1280] menubar '' orientation: horizontal\n\t\t[1282] link '\\ue604 DASHBOARD'\n\t\t[1286] link '\\ue60b SALES'\n\t\t[1290] link '\\ue608 CATALOG'\n\t\t[1294] link '\\ue603 CUSTOMERS'\n\t\t[1298] link '\\ue609 MARKETING'\n\t\t[1302] link '\\ue602 CONTENT'\n\t\t[1306] link '\\ue60a REPORTS'\n\t\t[1310] link '\\ue60d STORES'\n\t\t[1314] link '\\u...",
+      "context": {
+        "current_state": "Tab 0 (current): Design / Content / Magento Admin\n\n[1275] RootWebArea 'Design / Content / Magento Admin' focused: True\n\t[1328] link 'Magento Admin Panel'\n\t\t[1336] img 'Magento Admin Panel'\n\t[1280] men...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The user is now on a dedicated page for previewing the Magento Blank theme, with a clear heading indicating this focus.\n2. Detailed information about the theme is pres...",
+        "predicted_next_state": "1. The webpage will now display the Magento Blank theme preview, with a RootWebArea titled “Magento Blank Theme Preview” and a confirmation of the theme's version and status.\n2. A heading will state t...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The webpage will transition to a new RootWebArea titled \"Preview of Magento Blank Theme.\" This will include:\n1. A prominent heading indicating that it is a preview of the \"Magento Blank\" theme.\n2. Vis...",
+        "predicted_gpt4o": "1. The webpage will update to a new RootWebArea titled something like “Magento Blank Theme Preview” or similar, indicating that the user is now viewing the details of the \"Magento Blank\" theme.\n2. A n...",
+        "num_models_compared": 3,
+        "objective": "Preview the Magento Blank theme for my shop",
+        "gold_action": "click [2124] where [2124] is link 'View'"
+      },
+      "output": "The expected effect is that: \n1. The user is now on a dedicated page for previewing the Magento Blank theme, with a clear heading indicating this focus.\n2. Detailed information about the theme is presented, including its path and title, allowing the user to understand its configuration and features.\n3. The interface now includes a 'Theme Settings' group, which likely contains options or settings specific to the Magento Blank theme, enhancing user interaction.\n4. The 'Back' button allows for easy navigation back to the previous page if desired.\n5. Overall, the user experience is now oriented towards managing and previewing the Magento Blank theme, aligning with the user's objective.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Post my question, \"is car necessary in NYC\", in a subreddit where I'm likely to get an answer\n\nCurrent State Observation:\nTab 0 (current): Postmill\n\n[1] RootWebArea 'Postmill' focused: True\n\t[17] HeaderAsNonLandmark ''\n\t\t[27] link 'Home'\n\t[69] link 'Forums'\n\t[70] link 'Wiki'\n\t[51] searchbox 'Search query'\n\t[52] link 'Notifications (0)'\n\t[53] link 'Submit'\n\t[210] button 'MarvelsGrantMan136' hasPopup: menu expanded: False\n\t[12] main ''\n\t\t[101] link 'Submissions'\n\t\t[102] link 'Comments'\n\t\t[211] button 'Filter on: Featured' hasPopup: menu expanded: False\n\t\t[212] button 'Sort by: Hot' hasPopup: menu expanded: False\n\t\t[1...",
+      "context": {
+        "current_state": "Tab 0 (current): Postmill\n\n[1] RootWebArea 'Postmill' focused: True\n\t[17] HeaderAsNonLandmark ''\n\t\t[27] link 'Home'\n\t[69] link 'Forums'\n\t[70] link 'Wiki'\n\t[51] searchbox 'Search query'\n\t[52] link 'Not...",
+        "ground_truth_next_state": "The expected effect is that:\n1. The user will be presented with a submission form to enter a title and body for their question, \"is car necessary in NYC\".\n2. The user will input the title into the 'Ti...",
+        "predicted_next_state": "The webpage will transition to a submission form for creating a new post, allowing the user to input their question: \n1. A heading will confirm that the user is in the submission form, providing clear...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The webpage will transition to a new RootWebArea dedicated to creating a post. This will include:\n1. A prominent heading indicating that the user is in the \"Create Post\" or \"Submit a Question\" section...",
+        "predicted_gpt4o": "The expected effect is that:\n1. The RootWebArea will now be focused on a page titled \"Submit a new post\" or similar.\n2. The main section will include input fields for the post title and body, allowing...",
+        "num_models_compared": 3,
+        "objective": "Post my question, \"is car necessary in NYC\", in a subreddit where I'm likely to get an answer",
+        "gold_action": "click [53] where [53] is link 'Submit'"
+      },
+      "output": "The expected effect is that:\n1. The user will be presented with a submission form to enter a title and body for their question, \"is car necessary in NYC\".\n2. The user will input the title into the 'Title *' field and may also provide additional context in the 'Body' section.\n3. The user will utilize the 'Choose one…' combobox to select a relevant subreddit that is likely to yield responses to their query regarding car necessity in NYC, potentially selecting a forum like r/AskNYC or r/NYC.\n4. Once all required fields are filled out, the user will be able to submit their question by clicking the 'Create submission' button, successfully posting their inquiry to the chosen subreddit for community feedback.\n5. The interface will facilitate the user's posting experience, ensuring they have all needed tools and options for effective submission.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Post my question, \"is car necessary in NYC\", in a subreddit where I'm likely to get an answer\n\nCurrent State Observation:\nTab 0 (current): Create submission\n\n[228] RootWebArea 'Create submission' focused: True\n\t[241] HeaderAsNonLandmark ''\n\t\t[247] link 'Home'\n\t\t\t[261] StaticText 'Postmill'\n\t[285] link 'Forums'\n\t[286] link 'Wiki'\n\t[267] searchbox 'Search query'\n\t[268] link 'Notifications (0)'\n\t[269] link 'Submit'\n\t[797] button 'MarvelsGrantMan136' hasPopup: menu expanded: False\n\t[238] main ''\n\t\t[245] heading 'Create submission'\n\t\t[273] radio 'URL' checked: true\n\t\t[275] radio 'Image' checked: false\n\t\t[348] textbox ''...",
+      "context": {
+        "current_state": "Tab 0 (current): Create submission\n\n[228] RootWebArea 'Create submission' focused: True\n\t[241] HeaderAsNonLandmark ''\n\t\t[247] link 'Home'\n\t\t\t[261] StaticText 'Postmill'\n\t[285] link 'Forums'\n\t[286] lin...",
+        "ground_truth_next_state": "The expected effect is that:\n1. The Title textbox will now display the question \"is car necessary in NYC\", clearly indicating the user's inquiry as part of the submission.\n2. The user will still be ab...",
+        "predicted_next_state": "The webpage will reflect the changes as follows:\n1. The title textbox will display the entered text: \"is car necessary in NYC.\"\n2. The user will now have the option to add the body of the submission o...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The expected effect is that the title textbox will now display the text \"is car necessary in NYC,\" indicating that the user's question has been successfully entered. The user will still be in the \"Cre...",
+        "predicted_gpt4o": "The expected effect is that:\n1. The title textbox [472] will now contain the text “is car necessary in NYC”.\n2. The focus will likely remain on the title textbox or move to the next interactive elemen...",
+        "num_models_compared": 3,
+        "objective": "Post my question, \"is car necessary in NYC\", in a subreddit where I'm likely to get an answer",
+        "gold_action": "type [472] [is car necessary in NYC] where [472] is textbox 'Title *' required: True"
+      },
+      "output": "The expected effect is that:\n1. The Title textbox will now display the question \"is car necessary in NYC\", clearly indicating the user's inquiry as part of the submission.\n2. The user will still be able to proceed to fill out the body of the submission or select a forum, as the interface remains responsive and focused on the current input field.\n3. The overall layout of the submission form remains unchanged, allowing the user to continue with the submission process, including adding a body text or selecting a forum for posting the question.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Post my question, \"is car necessary in NYC\", in a subreddit where I'm likely to get an answer\n\nCurrent State Observation:\nTab 0 (current): Create submission\n\n[228] RootWebArea 'Create submission' focused: True\n\t[241] HeaderAsNonLandmark ''\n\t\t[247] link 'Home'\n\t\t\t[261] StaticText 'Postmill'\n\t[285] link 'Forums'\n\t[286] link 'Wiki'\n\t[267] searchbox 'Search query'\n\t[268] link 'Notifications (0)'\n\t[269] link 'Submit'\n\t[797] button 'MarvelsGrantMan136' hasPopup: menu expanded: False\n\t[238] main ''\n\t\t[245] heading 'Create submission'\n\t\t[273] radio 'URL' checked: true\n\t\t[275] radio 'Image' checked: false\n\t\t[348] textbox ''...",
+      "context": {
+        "current_state": "Tab 0 (current): Create submission\n\n[228] RootWebArea 'Create submission' focused: True\n\t[241] HeaderAsNonLandmark ''\n\t\t[247] link 'Home'\n\t\t\t[261] StaticText 'Postmill'\n\t[285] link 'Forums'\n\t[286] lin...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The user has input \"nyc\" into the subreddit selection combobox, indicating they are selecting or have selected the appropriate forum for their question about car neces...",
+        "predicted_next_state": "The webpage will continue to display the submission creation interface without any changes resulting from the action of typing \"nyc\" into the \"Choose one…\" textbox. \n1. The RootWebArea remains focused...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "1. The combobox labeled \"Choose one…\" will be populated with suggestions related to the term “nyc,” such as subreddits like “r/nyc” or similar communities that are relevant to the user's question.\n2. ...",
+        "predicted_gpt4o": "1. The combobox [803] will be updated to contain the text “nyc.”\n2. The combobox will expand, and a listbox popup will appear, showing a list of forums or subreddits that match the query “nyc.”\n3. The...",
+        "num_models_compared": 3,
+        "objective": "Post my question, \"is car necessary in NYC\", in a subreddit where I'm likely to get an answer",
+        "gold_action": "type [803] [nyc] where [803] is textbox 'Choose one…' required: False"
+      },
+      "output": "The expected effect is that: \n1. The user has input \"nyc\" into the subreddit selection combobox, indicating they are selecting or have selected the appropriate forum for their question about car necessity in NYC.\n2. The interface remains focused on the task of creating a submission, with the title of the question visible and the submission button available for completion.\n3. The user is likely prepared to submit their question in the NYC subreddit or related forum, providing a clear path to obtaining answers relevant to their query about the necessity of owning a car in New York City.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Post my question, \"is car necessary in NYC\", in a subreddit where I'm likely to get an answer\n\nCurrent State Observation:\nTab 0 (current): Create submission\n\n[228] RootWebArea 'Create submission' focused: True\n\t[241] HeaderAsNonLandmark ''\n\t\t[247] link 'Home'\n\t\t\t[261] StaticText 'Postmill'\n\t[285] link 'Forums'\n\t[286] link 'Wiki'\n\t[267] searchbox 'Search query'\n\t[268] link 'Notifications (0)'\n\t[269] link 'Submit'\n\t[797] button 'MarvelsGrantMan136' hasPopup: menu expanded: False\n\t[238] main ''\n\t\t[245] heading 'Create submission'\n\t\t[273] radio 'URL' checked: true\n\t\t[275] radio 'Image' checked: false\n\t\t[348] textbox ''...",
+      "context": {
+        "current_state": "Tab 0 (current): Create submission\n\n[228] RootWebArea 'Create submission' focused: True\n\t[241] HeaderAsNonLandmark ''\n\t\t[247] link 'Home'\n\t\t\t[261] StaticText 'Postmill'\n\t[285] link 'Forums'\n\t[286] lin...",
+        "ground_truth_next_state": "The expected effect is that: \n1. The webpage will now display the submitted question, \"is car necessary in NYC\", prominently at the top.\n2. New options for user engagement will be available, including...",
+        "predicted_next_state": "1. The webpage will now reflect that the submission has been successfully created, indicating a new post titled \"is car necessary in NYC\" in the subreddit.\n2. The heading will confirm that the submiss...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The expected effect is that the webpage will transition to a confirmation or the subreddit page displaying the newly created post titled \"is car necessary in NYC.\" This will include:\n1. A message conf...",
+        "predicted_gpt4o": "1. The RootWebArea will transition from \"Create submission\" to a new state indicating the successful submission of the post.\n2. A confirmation message will be displayed, typically in the form of a sta...",
+        "num_models_compared": 3,
+        "objective": "Post my question, \"is car necessary in NYC\", in a subreddit where I'm likely to get an answer",
+        "gold_action": "click [470] where [470] is button 'Create submission'"
+      },
+      "output": "The expected effect is that: \n1. The webpage will now display the submitted question, \"is car necessary in NYC\", prominently at the top.\n2. New options for user engagement will be available, including the ability to comment, delete the post, or subscribe to updates.\n3. The submission will show that it was posted recently, with a timestamp indicating its freshness.\n4. Users will see an empty comment section awaiting responses, emphasizing that engagement is expected.\n5. The interface will be simplified as the submission form is removed, focusing the user’s attention on the question and potential responses.\n6. The presence of a direct link (short URL) allows for easy sharing of the post, facilitating further discussion in the subreddit.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    },
+    {
+      "input": "Objective: Find a subreddit focused on topics related to gaming consoles, and post my question, \"what is the recommended console to buy these days\" there\n\nCurrent State Observation:\nTab 0 (current): Postmill\n\n[1] RootWebArea 'Postmill' focused: True\n\t[17] HeaderAsNonLandmark ''\n\t\t[27] link 'Home'\n\t[69] link 'Forums'\n\t[70] link 'Wiki'\n\t[51] searchbox 'Search query'\n\t[52] link 'Notifications (0)'\n\t[53] link 'Submit'\n\t[224] button 'MarvelsGrantMan136' hasPopup: menu expanded: False\n\t[12] main ''\n\t\t[101] link 'Submissions'\n\t\t[102] link 'Comments'\n\t\t[225] button 'Filter on: Featured' hasPopup: menu expanded: False\n\t\t[226] button 'Sort by: Hot' hasPopup: menu expanded: False\n\t\t[1...",
+      "context": {
+        "current_state": "Tab 0 (current): Postmill\n\n[1] RootWebArea 'Postmill' focused: True\n\t[17] HeaderAsNonLandmark ''\n\t\t[27] link 'Home'\n\t[69] link 'Forums'\n\t[70] link 'Wiki'\n\t[51] searchbox 'Search query'\n\t[52] link 'Not...",
+        "ground_truth_next_state": "The expected effect is that:\n1. The webpage now displays a focused search results page where users can see a list of discussions and articles related to gaming consoles.\n2. Users can explore topics su...",
+        "predicted_next_state": "The webpage will be updated to reflect the search results for the term “console,” focusing on subreddits related to gaming consoles. \n1. The RootWebArea will display a heading indicating the search re...",
+        "has_objective": true,
+        "has_gold_action": true,
+        "predicted_gpt4o_mini": "The expected effect is that the webpage will display search results related to the term \"console.\" This includes:\n1. The search box will now show \"console\" as the input text.\n2. A new section or area ...",
+        "predicted_gpt4o": "1. The webpage will update to reflect a search results page for the keyword “console.”\n2. A new heading will appear, indicating the search results for “console.”\n3. A list of forums or subreddits rela...",
+        "num_models_compared": 3,
+        "objective": "Find a subreddit focused on topics related to gaming consoles, and post my question, \"what is the recommended console to buy these days\" there",
+        "gold_action": "type [51] [console] where [51] is searchbox 'Search query'"
+      },
+      "output": "The expected effect is that:\n1. The webpage now displays a focused search results page where users can see a list of discussions and articles related to gaming consoles.\n2. Users can explore topics such as comparisons between different consoles, recommendations, and personal experiences shared by others in the community.\n3. The user interface allows for interactive elements, such as voting on submissions and participating in discussions via comments.\n4. Users can navigate to specific forums related to their interests in gaming consoles, making it easy to find relevant communities.\n5. The presence of recent discussions indicates that the community is active, providing a wealth of information for anyone seeking advice on console purchases, including the user's specific question about recommendations. \n\nIn this state, the user will be well-positioned to post their question, \"what is the recommended console to buy these days,\" in an appropriate discussion thread or forum focused on gaming consoles.",
+      "dataset": "LangAGI-Lab/human_eval-next_state_prediction_w_gpt4o",
+      "split": "train"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+2026-01-14 02:26:19,183 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 02:26:19,183 | INFO    | main                 | [94mDYNAMIC RANK ADAPTATION EXPERIMENT[0m
+2026-01-14 02:26:19,183 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 02:26:19,184 | INFO    | main                 | Checking path: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_4_experiment_workspace_0/dependencies/Extended_Multi-LLM_Coordination_Dataset_with_Token/data_out.json (exists: True)
+2026-01-14 02:26:19,184 | INFO    | main                 | Using dataset: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_4_experiment_workspace_0/dependencies/Extended_Multi-LLM_Coordination_Dataset_with_Token/data_out.json
+2026-01-14 02:26:19,184 | INFO    | load_dataset         | [94mLoading dataset from: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_4_experiment_workspace_0/dependencies/Extended_Multi-LLM_Coordination_Dataset_with_Token/data_out.json[0m
+2026-01-14 02:26:19,184 | INFO    | load_dataset         | Dataset file size: 776,411 bytes
+2026-01-14 02:26:19,194 | INFO    | load_dataset         | [92mLoaded 200 examples from dataset[0m
+2026-01-14 02:26:19,194 | INFO    | load_dataset         | [92mFirst example has all required keys[0m
+2026-01-14 02:26:19,195 | INFO    | main                 | Ground truth distribution: {np.str_('model_a'): np.int64(79), np.str_('model_b'): np.int64(77), np.str_('tie'): np.int64(44)}
+2026-01-14 02:26:19,195 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 02:26:19,195 | INFO    | main                 | [94mBASELINE: Full-Rank Coordinator[0m
+2026-01-14 02:26:19,195 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 02:26:19,197 | INFO    | __init__             | [92mFullRankCoordinator initialized: hidden_dim=256[0m
+2026-01-14 02:26:19,385 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 02:26:19,385 | INFO    | run_experiment       | 
+[94m================================================================================[0m
+2026-01-14 02:26:19,385 | INFO    | run_experiment       | [94mRunning experiment: Baseline (Full-Rank)[0m
+2026-01-14 02:26:19,385 | INFO    | run_experiment       | [94m================================================================================[0m
+
+2026-01-14 02:26:19,385 | INFO    | run_experiment       | Processing 200 examples with Baseline (Full-Rank)
+2026-01-14 02:26:19,400 | INFO    | run_experiment       | [96mProcessing example 20/200[0m
+2026-01-14 02:26:19,411 | INFO    | run_experiment       | [96mProcessing example 40/200[0m
+2026-01-14 02:26:19,417 | INFO    | run_experiment       | [96mProcessing example 60/200[0m
+2026-01-14 02:26:19,424 | INFO    | run_experiment       | [96mProcessing example 80/200[0m
+2026-01-14 02:26:19,433 | INFO    | run_experiment       | [96mProcessing example 100/200[0m
+2026-01-14 02:26:19,440 | INFO    | run_experiment       | [96mProcessing example 120/200[0m
+2026-01-14 02:26:19,446 | INFO    | run_experiment       | [96mProcessing example 140/200[0m
+2026-01-14 02:26:19,452 | INFO    | run_experiment       | [96mProcessing example 160/200[0m
+2026-01-14 02:26:19,460 | INFO    | run_experiment       | [96mProcessing example 180/200[0m
+2026-01-14 02:26:19,467 | INFO    | run_experiment       | [96mProcessing example 200/200[0m
+2026-01-14 02:26:19,467 | INFO    | run_experiment       | 
+[92mExperiment Baseline (Full-Rank) complete: 200 predictions made[0m
+2026-01-14 02:26:19,474 | INFO    | main                 | 
+[92mBaseline Results:[0m
+2026-01-14 02:26:19,475 | INFO    | main                 |   Total tokens: 64143
+2026-01-14 02:26:19,475 | INFO    | main                 |   Mean tokens/episode: 320.71
+2026-01-14 02:26:19,475 | INFO    | main                 |   Accuracy: 0.5250
+2026-01-14 02:26:19,475 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 02:26:19,475 | INFO    | main                 | [94mSTATIC LOW-RANK: Fixed rank=32[0m
+2026-01-14 02:26:19,475 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 02:26:19,476 | INFO    | __init__             | [92mStaticLowRankCoordinator initialized: rank=32, modules=4[0m
+2026-01-14 02:26:19,476 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 02:26:19,476 | INFO    | run_experiment       | 
+[94m================================================================================[0m
+2026-01-14 02:26:19,477 | INFO    | run_experiment       | [94mRunning experiment: Static Low-Rank[0m
+2026-01-14 02:26:19,477 | INFO    | run_experiment       | [94m================================================================================[0m
+
+2026-01-14 02:26:19,477 | INFO    | run_experiment       | Processing 200 examples with Static Low-Rank
+2026-01-14 02:26:19,482 | INFO    | run_experiment       | [96mProcessing example 20/200[0m
+2026-01-14 02:26:19,488 | INFO    | run_experiment       | [96mProcessing example 40/200[0m
+2026-01-14 02:26:19,495 | INFO    | run_experiment       | [96mProcessing example 60/200[0m
+2026-01-14 02:26:19,509 | INFO    | run_experiment       | [96mProcessing example 80/200[0m
+2026-01-14 02:26:19,518 | INFO    | run_experiment       | [96mProcessing example 100/200[0m
+2026-01-14 02:26:19,525 | INFO    | run_experiment       | [96mProcessing example 120/200[0m
+2026-01-14 02:26:19,534 | INFO    | run_experiment       | [96mProcessing example 140/200[0m
+2026-01-14 02:26:19,541 | INFO    | run_experiment       | [96mProcessing example 160/200[0m
+2026-01-14 02:26:19,549 | INFO    | run_experiment       | [96mProcessing example 180/200[0m
+2026-01-14 02:26:19,555 | INFO    | run_experiment       | [96mProcessing example 200/200[0m
+2026-01-14 02:26:19,556 | INFO    | run_experiment       | 
+[92mExperiment Static Low-Rank complete: 200 predictions made[0m
+2026-01-14 02:26:19,562 | INFO    | main                 | 
+[92mStatic Low-Rank Results:[0m
+2026-01-14 02:26:19,562 | INFO    | main                 |   Total tokens: 63357
+2026-01-14 02:26:19,562 | INFO    | main                 |   Mean tokens/episode: 316.79
+2026-01-14 02:26:19,562 | INFO    | main                 |   Accuracy: 0.5250
+2026-01-14 02:26:19,563 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 02:26:19,563 | INFO    | main                 | [94mDYNAMIC ADAPTIVE RANK: rank=8-64[0m
+2026-01-14 02:26:19,563 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 02:26:19,565 | INFO    | __init__             | [92mDynamicRankCoordinator initialized:[0m
+2026-01-14 02:26:19,565 | INFO    | __init__             |   min_rank=8, max_rank=64, modules=4
+2026-01-14 02:26:19,565 | INFO    | __init__             |   Adaptive rank selection enabled
+2026-01-14 02:26:19,566 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 02:26:19,566 | INFO    | run_experiment       | 
+[94m================================================================================[0m
+2026-01-14 02:26:19,566 | INFO    | run_experiment       | [94mRunning experiment: Dynamic Adaptive Rank[0m
+2026-01-14 02:26:19,566 | INFO    | run_experiment       | [94m================================================================================[0m
+
+2026-01-14 02:26:19,566 | INFO    | run_experiment       | Processing 200 examples with Dynamic Adaptive Rank
+2026-01-14 02:26:19,574 | INFO    | run_experiment       | [96mProcessing example 20/200[0m
+2026-01-14 02:26:19,583 | INFO    | run_experiment       | [96mProcessing example 40/200[0m
+2026-01-14 02:26:19,592 | INFO    | run_experiment       | [96mProcessing example 60/200[0m
+2026-01-14 02:26:19,600 | INFO    | run_experiment       | [96mProcessing example 80/200[0m
+2026-01-14 02:26:19,609 | INFO    | run_experiment       | [96mProcessing example 100/200[0m
+2026-01-14 02:26:19,618 | INFO    | run_experiment       | [96mProcessing example 120/200[0m
+2026-01-14 02:26:19,626 | INFO    | run_experiment       | [96mProcessing example 140/200[0m
+2026-01-14 02:26:19,637 | INFO    | run_experiment       | [96mProcessing example 160/200[0m
+2026-01-14 02:26:19,651 | INFO    | run_experiment       | [96mProcessing example 180/200[0m
+2026-01-14 02:26:19,663 | INFO    | run_experiment       | [96mProcessing example 200/200[0m
+2026-01-14 02:26:19,666 | INFO    | run_experiment       | 
+[92mExperiment Dynamic Adaptive Rank complete: 200 predictions made[0m
+2026-01-14 02:26:19,680 | INFO    | main                 | 
+[92mDynamic Adaptive Rank Results:[0m
+2026-01-14 02:26:19,680 | INFO    | main                 |   Total tokens: 63357
+2026-01-14 02:26:19,681 | INFO    | main                 |   Mean tokens/episode: 316.79
+2026-01-14 02:26:19,681 | INFO    | main                 |   Accuracy: 0.5250
+2026-01-14 02:26:19,681 | INFO    | main                 |   Mean rank: 14.49
+2026-01-14 02:26:19,681 | INFO    | main                 |   Rank range: [8, 16]
+2026-01-14 02:26:19,681 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 02:26:19,681 | INFO    | main                 | [94mCOMPARISON & STATISTICAL ANALYSIS[0m
+2026-01-14 02:26:19,681 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 02:26:19,682 | INFO    | main                 | [96mToken Efficiency:[0m
+2026-01-14 02:26:19,683 | INFO    | main                 |   Baseline total: 64143
+2026-01-14 02:26:19,683 | INFO    | main                 |   Static total: 63357 (+1.23% vs baseline)
+2026-01-14 02:26:19,683 | INFO    | main                 |   Dynamic total: 63357 (+1.23% vs baseline)
+2026-01-14 02:26:19,683 | INFO    | main                 |   Dynamic vs Static: +0.00%
+2026-01-14 02:26:19,687 | INFO    | main                 | 
+[96mStatistical Significance:[0m
+2026-01-14 02:26:19,687 | INFO    | main                 |   Dynamic vs Baseline: p=0.0000, sig=True
+2026-01-14 02:26:19,687 | INFO    | main                 |   Dynamic vs Static: p=nan, sig=False
+2026-01-14 02:26:19,687 | INFO    | main                 | 
+[96mHypothesis Test:[0m
+2026-01-14 02:26:19,687 | INFO    | main                 |   Dynamic achieves better token reduction than static: False
+2026-01-14 02:26:19,687 | INFO    | main                 |   Dynamic maintains performance: True
+2026-01-14 02:26:19,687 | INFO    | main                 |   SUCCESS: False
+2026-01-14 02:26:19,760 | INFO    | main                 | 
+[92mResults saved to: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_4_experiment_workspace_0/method_out.json[0m
+2026-01-14 02:26:19,761 | INFO    | main                 | [92mSummary metrics saved to: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_4_experiment_workspace_0/method_summary.json[0m
+2026-01-14 02:26:19,761 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 02:26:19,762 | INFO    | main                 | [94mEXPERIMENT SUMMARY[0m
+2026-01-14 02:26:19,762 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 02:26:19,762 | INFO    | main                 | Examples processed: 200
+2026-01-14 02:26:19,762 | INFO    | main                 | 
+[96mKey Findings:[0m
+2026-01-14 02:26:19,763 | INFO    | main                 |   Static reduction vs baseline: 1.23%
+2026-01-14 02:26:19,763 | INFO    | main                 |   Dynamic reduction vs baseline: 1.23%
+2026-01-14 02:26:19,763 | INFO    | main                 |   Dynamic improvement over static: +0.00%
+2026-01-14 02:26:19,763 | INFO    | main                 |   Dynamic mean rank: 14.49
+2026-01-14 02:26:19,763 | INFO    | main                 | 
+[91mHYPOTHESIS NOT CONFIRMED[0m
+

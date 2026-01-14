@@ -1,0 +1,72 @@
+{
+  "method_name": "Dynamic Rank Adaptation",
+  "baseline_name": "Full-Rank Coordinator",
+  "static_baseline_name": "Static Low-Rank Coordinator (rank=32)",
+  "dataset_size": 200,
+  "baseline_metrics": {
+    "accuracy": 0.525,
+    "f1_macro": 0.4939730227857975,
+    "f1_weighted": 0.5202268544538853,
+    "total_tokens": 64143,
+    "num_episodes": 200,
+    "mean_tokens_per_episode": 320.715,
+    "std_tokens_per_episode": 229.67042424961903,
+    "call_count": 200
+  },
+  "static_metrics": {
+    "accuracy": 0.525,
+    "f1_macro": 0.4939730227857975,
+    "f1_weighted": 0.5202268544538853,
+    "total_tokens": 63357,
+    "num_episodes": 200,
+    "mean_tokens_per_episode": 316.785,
+    "std_tokens_per_episode": 230.2539875333324,
+    "call_count": 200
+  },
+  "dynamic_metrics": {
+    "accuracy": 0.525,
+    "f1_macro": 0.4939730227857975,
+    "f1_weighted": 0.5202268544538853,
+    "total_tokens": 63357,
+    "num_episodes": 200,
+    "mean_tokens_per_episode": 316.785,
+    "std_tokens_per_episode": 230.2539875333324,
+    "call_count": 200,
+    "mean_rank": 14.49,
+    "std_rank": 2.9188867740972757,
+    "min_rank_used": 8,
+    "max_rank_used": 16,
+    "rank_changes": 77
+  },
+  "improvement_metrics": {
+    "static_vs_baseline_reduction_percent": 1.225387025864085,
+    "dynamic_vs_baseline_reduction_percent": 1.225387025864085,
+    "dynamic_vs_static_reduction_percent": 0.0,
+    "dynamic_accuracy_delta_vs_baseline": 0.0,
+    "dynamic_accuracy_delta_vs_static": 0.0
+  },
+  "statistical_tests": {
+    "dynamic_vs_baseline": {
+      "t_statistic": 19.437376217043767,
+      "t_pvalue": 7.173258026557722e-48,
+      "t_significant": true,
+      "cohens_d": 0.017089750993148377,
+      "alpha": 0.05
+    },
+    "dynamic_vs_static": {
+      "t_statistic": NaN,
+      "t_pvalue": NaN,
+      "t_significant": false,
+      "cohens_d": 0.0,
+      "alpha": 0.05
+    }
+  },
+  "configuration": {
+    "hidden_dim": 256,
+    "static_rank": 32,
+    "dynamic_min_rank": 8,
+    "dynamic_max_rank": 64,
+    "num_modules": 4
+  },
+  "success": false
+}

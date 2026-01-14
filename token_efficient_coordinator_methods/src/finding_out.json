@@ -1,0 +1,50 @@
+{
+  "question": "Identify state-of-the-art low-rank or compressed recurrent coordination methods for multi-LLM agents and assess their communication token overhead using the existing coordination dataset.",
+  "answer": "This investigation identifies three complementary, state-of-the-art approaches that are directly relevant to building token\u2011efficient recurrent coordinators for multi\u2011LLM systems and describes how the provided coordination dataset can be used to quantify communication token overheads. Recurrent Independent Mechanisms (RIMs) propose multiple recurrent modules that are updated sparsely and communicate only through an attention bottleneck, which reduces unnecessary inter-module messaging and encourages specialization [1]. A recent Long\u2192Short training method, TokenSqueeze, explicitly targets token\u2011efficiency for reasoning by training models to compress reasoning traces and reports substantial token reductions while preserving task accuracy under many settings [2]. A learned hierarchical context/latent compression family (CCF) complements these ideas by producing compact, task\u2011relevant latents that can replace full token histories for downstream modules [3]. The provided literature survey notes that these three lines (RIMs, CCF, TokenSqueeze) are complementary but that no existing work presents an end\u2011to\u2011end multi\u2011LLM coordinator that integrates all three techniques and evaluates token/performance tradeoffs empirically [3]. A formal rank\u2011bound on recurrent coordinator state has been proven, which constrains the representational rank of low\u2011dimensional coordinators and therefore sets theoretical limits on compression vs expressivity tradeoffs [4]. The Multi\u2011Agent Coordination Communication\u2011Efficiency Dataset contains 200 curated multi\u2011LLM interaction episodes with per\u2011turn context, agent responses, and human\u2011judged outcomes, and is explicitly intended for training and evaluating low\u2011rank coordinators and token\u2011reduction strategies [5]. Concretely, the dataset enables computing per\u2011turn token counts via off\u2011the\u2011shelf tokenizers, extracting conversation state latents for CCF training, and measuring task performance after applying TokenSqueeze\u2011style compression to inter\u2011agent messages [5]. Supporting evidence: RIMs\u2019 sparse update and attention bottleneck design reduces communication needs by activating only relevant modules per step [1, 3]. TokenSqueeze demonstrates that learned Long\u2192Short training can produce large token savings while maintaining reasoning performance in many benchmarked cases [2]. Contradicting/limiting evidence: none of the sources provides an integrated empirical evaluation of a low\u2011rank recurrent coordinator that combines RIMs, latent compression, and TokenSqueeze\u2011style message fine\u2011tuning, so claims about end\u2011to\u2011end token savings remain speculative until tested on the dataset [3, 5]. The rank\u2011bound proof implies there are theoretical limits to how low dimensional a recurrent coordinator can be without losing necessary capacity, which constrains worst\u2011case compression [4]. Confidence and required next steps: I have moderate confidence in the qualitative suitability of these three methods for token\u2011efficient multi\u2011LLM coordination based on the sources [1, 2, 3]. I have low confidence in any specific numeric token\u2011savings estimate for an integrated system because no source reports an end\u2011to\u2011end empirical evaluation; resolving that requires running the recommended experiments on the provided dataset [3, 5]. Recommended experiment plan using the dataset: (1) implement a RIMs\u2011style low\u2011rank recurrent coordinator (sparse module updates + attention bottleneck) and instrument per\u2011turn inter\u2011agent messages for token counting [1, 3, 5]; (2) add learned hierarchical latent compression (CCF) to replace full token contexts with compact latents and measure token reductions and performance delta [3, 5]; (3) apply TokenSqueeze Long\u2192Short training to inter\u2011agent messages (and/or to module outputs) to further compress messages while tracking task accuracy [2, 5]; (4) run ablations (RIMs only, CCF only, TokenSqueeze only, and integrated) and report token budget vs decision\u2011fidelity curves plus latency and coordinator rank vs performance to verify the rank\u2011bound implications [4, 5]. Gaps and what would change conclusions: the absence of published integrated experiments is the primary gap and prevents reliable quantitative ranking of these approaches on token savings; obtaining run results on the dataset would materially change confidence and produce concrete token\u2011savings numbers [3, 5].",
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://openreview.net/forum?id=BylaUTNtPS",
+      "title": "Recurrent Independent Mechanisms (OpenReview)",
+      "summary": "Describes RIMs: multiple recurrent modules with sparse updates and communication via attention bottleneck; used to support claims about sparse modular recurrence and reduced communication."
+    },
+    {
+      "index": 2,
+      "url": "https://arxiv.org/pdf/2511.13223",
+      "title": "TokenSqueeze: Performance\u2011Preserving Compression for Reasoning LLMs (arXiv PDF)",
+      "summary": "Presents TokenSqueeze, a Long\u2192Short training method that compresses reasoning traces to reduce token usage while aiming to preserve accuracy; used to support claims about token\u2011efficient reasoning compression."
+    },
+    {
+      "index": 3,
+      "url": "user-provided: Literature Survey on Low-Rank Recurrent Coordinators and Token Compression (fin_1_001)",
+      "title": "Literature Survey on Low\u2011Rank Recurrent Coordinators and Token Compression",
+      "summary": "Surveyed RIMs, learned hierarchical context/latent compression (CCF), and TokenSqueeze; concluded no end\u2011to\u2011end coordinator combining all three exists and recommended integrated experiments and ablations."
+    },
+    {
+      "index": 4,
+      "url": "user-provided: Proof of Rank\u2011Bound on Recurrent Coordinator State (pro_1_002)",
+      "title": "Proof of Rank\u2011Bound on Recurrent Coordinator State",
+      "summary": "Provides a formal proof establishing a rank bound on recurrent coordinator state, constraining representational capacity for low\u2011dimensional coordinators."
+    },
+    {
+      "index": 5,
+      "url": "user-provided: Multi-Agent Coordination Communication\u2011Efficiency Dataset (dat_1_003)",
+      "title": "Multi\u2011Agent Coordination Communication\u2011Efficiency Dataset",
+      "summary": "Curated dataset of 200 multi\u2011LLM interaction episodes with per\u2011turn prompts, model responses, human judgments, and standardized schema; intended for training compression models and computing per\u2011turn token usage."
+    }
+  ],
+  "follow_up_questions": [
+    "What are the empirical token\u2011savings and task\u2011performance tradeoffs when integrating a RIMs\u2011style low\u2011rank coordinator + CCF latent compression + TokenSqueeze message fine\u2011tuning on the 200\u2011episode dataset?",
+    "How does the proven rank\u2011bound on coordinator state quantitatively constrain achievable token compression before task performance degrades for different multi\u2011LLM tasks?",
+    "Which tokenization and message formatting choices (e.g., BPE vs. unigram, serialized JSON vs. compact delimited text, embeddings vs. token strings) yield the best token\u2011efficiency vs fidelity when used with TokenSqueeze and CCF?"
+  ],
+  "summary": "RIMs (sparse modular recurrence), TokenSqueeze (Long\u2192Short reasoning compression), and learned hierarchical context/latent compression (CCF) are the most relevant methods for token\u2011efficient multi\u2011LLM coordination [1, 2, 3]. The provided 200\u2011episode dataset enables per\u2011turn token accounting and training/evaluation of these methods, but no source presents an integrated end\u2011to\u2011end evaluation combining all three, so quantitative token\u2011savings estimates require running the recommended experiments; a proven rank\u2011bound constrains how compact coordinators can be without losing capacity [4, 5, 3].",
+  "model": "openai/gpt-5-mini",
+  "tool_calls": {
+    "web_search_fast": 3,
+    "web_fetch_fast": 2
+  },
+  "iterations_used": 1,
+  "forced_output": true,
+  "workspace_path": "/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_2_finding_workspace_0"
+}

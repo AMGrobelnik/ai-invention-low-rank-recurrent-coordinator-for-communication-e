@@ -1,0 +1,84 @@
+2026-01-14 01:30:08,215 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 01:30:08,216 | INFO    | main                 | [94mRANK-ABLATION STUDY: LOW-RANK RECURRENT COORDINATOR[0m
+2026-01-14 01:30:08,217 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 01:30:08,217 | INFO    | main                 | Dataset path: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_3_experiment_workspace_0/dependencies/Extended_Multi-LLM_Coordination_Dataset_with_Token/data_out.json
+2026-01-14 01:30:08,217 | INFO    | load_dataset         | [94mLoading dataset from: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_3_experiment_workspace_0/dependencies/Extended_Multi-LLM_Coordination_Dataset_with_Token/data_out.json[0m
+2026-01-14 01:30:08,231 | INFO    | load_dataset         | [92mLoaded 200 examples from dataset[0m
+2026-01-14 01:30:08,232 | INFO    | main                 | Ground truth distribution: {np.str_('model_a'): np.int64(79), np.str_('model_b'): np.int64(77), np.str_('tie'): np.int64(44)}
+2026-01-14 01:30:08,232 | INFO    | run_rank_ablation    | 
+[94m================================================================================[0m
+2026-01-14 01:30:08,232 | INFO    | run_rank_ablation    | [94mRANK ABLATION STUDY[0m
+2026-01-14 01:30:08,232 | INFO    | run_rank_ablation    | [94m================================================================================[0m
+
+2026-01-14 01:30:08,232 | INFO    | run_rank_ablation    | 
+[96mRunning BASELINE (Full-Rank)[0m
+2026-01-14 01:30:08,234 | INFO    | __init__             | [92mFullRankCoordinator initialized: hidden_dim=256[0m
+2026-01-14 01:30:08,527 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 01:30:08,529 | INFO    | run_experiment       | 
+[94mRunning experiment: Baseline (Full-Rank)[0m
+2026-01-14 01:30:08,687 | INFO    | run_experiment       | [92mExperiment Baseline (Full-Rank) complete: 200 predictions[0m
+2026-01-14 01:30:08,707 | INFO    | run_rank_ablation    | [92mBaseline: accuracy=0.5250, tokens=64143[0m
+2026-01-14 01:30:08,709 | INFO    | run_rank_ablation    | 
+[96mRunning RANK=8[0m
+2026-01-14 01:30:08,714 | INFO    | __init__             | [92mLowRankCoordinator initialized: rank=8, compression=3.12%[0m
+2026-01-14 01:30:08,717 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 01:30:08,719 | INFO    | run_experiment       | 
+[94mRunning experiment: Rank-8[0m
+2026-01-14 01:30:08,896 | INFO    | run_experiment       | [92mExperiment Rank-8 complete: 200 predictions[0m
+2026-01-14 01:30:08,911 | INFO    | run_rank_ablation    | [92mRank-8: accuracy=0.5250 (Δ=+0.0000), tokens=63357 (+1.23%), p=0.0000[0m
+2026-01-14 01:30:08,912 | INFO    | run_rank_ablation    | 
+[96mRunning RANK=16[0m
+2026-01-14 01:30:08,913 | INFO    | __init__             | [92mLowRankCoordinator initialized: rank=16, compression=6.25%[0m
+2026-01-14 01:30:08,917 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 01:30:08,917 | INFO    | run_experiment       | 
+[94mRunning experiment: Rank-16[0m
+2026-01-14 01:30:09,041 | INFO    | run_experiment       | [92mExperiment Rank-16 complete: 200 predictions[0m
+2026-01-14 01:30:09,054 | INFO    | run_rank_ablation    | [92mRank-16: accuracy=0.5250 (Δ=+0.0000), tokens=63357 (+1.23%), p=0.0000[0m
+2026-01-14 01:30:09,055 | INFO    | run_rank_ablation    | 
+[96mRunning RANK=32[0m
+2026-01-14 01:30:09,058 | INFO    | __init__             | [92mLowRankCoordinator initialized: rank=32, compression=12.50%[0m
+2026-01-14 01:30:09,059 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 01:30:09,059 | INFO    | run_experiment       | 
+[94mRunning experiment: Rank-32[0m
+2026-01-14 01:30:09,211 | INFO    | run_experiment       | [92mExperiment Rank-32 complete: 200 predictions[0m
+2026-01-14 01:30:09,223 | INFO    | run_rank_ablation    | [92mRank-32: accuracy=0.5250 (Δ=+0.0000), tokens=63357 (+1.23%), p=0.0000[0m
+2026-01-14 01:30:09,224 | INFO    | run_rank_ablation    | 
+[96mRunning RANK=64[0m
+2026-01-14 01:30:09,228 | INFO    | __init__             | [92mLowRankCoordinator initialized: rank=64, compression=25.00%[0m
+2026-01-14 01:30:09,230 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 01:30:09,231 | INFO    | run_experiment       | 
+[94mRunning experiment: Rank-64[0m
+2026-01-14 01:30:09,461 | INFO    | run_experiment       | [92mExperiment Rank-64 complete: 200 predictions[0m
+2026-01-14 01:30:09,475 | INFO    | run_rank_ablation    | [92mRank-64: accuracy=0.5250 (Δ=+0.0000), tokens=63357 (+1.23%), p=0.0000[0m
+2026-01-14 01:30:09,476 | INFO    | run_rank_ablation    | 
+[96mRunning RANK=128[0m
+2026-01-14 01:30:09,485 | INFO    | __init__             | [92mLowRankCoordinator initialized: rank=128, compression=50.00%[0m
+2026-01-14 01:30:09,490 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 01:30:09,500 | INFO    | run_experiment       | 
+[94mRunning experiment: Rank-128[0m
+2026-01-14 01:30:09,727 | INFO    | run_experiment       | [92mExperiment Rank-128 complete: 200 predictions[0m
+2026-01-14 01:30:09,736 | INFO    | run_rank_ablation    | [92mRank-128: accuracy=0.5250 (Δ=+0.0000), tokens=63357 (+1.23%), p=0.0000[0m
+2026-01-14 01:30:09,737 | INFO    | generate_visualizations | 
+[94mGenerating visualizations...[0m
+2026-01-14 01:30:12,106 | INFO    | generate_visualizations | [92mPlots saved to: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_3_experiment_workspace_0/rank_ablation_plots.png[0m
+2026-01-14 01:30:12,106 | INFO    | identify_optimal_rank | 
+[94mIdentifying optimal rank configurations...[0m
+2026-01-14 01:30:12,106 | INFO    | identify_optimal_rank | [92mBest overall rank: 8 (score=1.23, token_reduction=1.23%)[0m
+2026-01-14 01:30:12,106 | WARNING | identify_optimal_rank | [93mNo rank meets all targets (>15% token reduction, <5% accuracy drop)[0m
+2026-01-14 01:30:12,189 | INFO    | main                 | 
+[92mResults saved to: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_3_experiment_workspace_0/method_out.json[0m
+2026-01-14 01:30:12,189 | INFO    | main                 | [92mSummary saved to: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_3_experiment_workspace_0/method_summary.json[0m
+2026-01-14 01:30:12,189 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 01:30:12,189 | INFO    | main                 | [94mEXPERIMENT SUMMARY[0m
+2026-01-14 01:30:12,189 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 01:30:12,190 | INFO    | main                 | Rank values tested: [8, 16, 32, 64, 128]
+2026-01-14 01:30:12,190 | INFO    | main                 | Best overall rank: 8
+2026-01-14 01:30:12,190 | INFO    | main                 | Token reduction: 1.23%
+2026-01-14 01:30:12,190 | INFO    | main                 | Accuracy delta: +0.00%
+2026-01-14 01:30:12,190 | INFO    | main                 | 
+[91mHYPOTHESIS NOT VALIDATED[0m
+

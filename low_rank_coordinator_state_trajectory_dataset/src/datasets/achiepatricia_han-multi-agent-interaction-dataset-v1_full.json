@@ -1,0 +1,32 @@
+[
+  {
+    "dataset_type": "multi_agent_interaction",
+    "samples": [
+      {
+        "agents": [
+          "carrier",
+          "navigator"
+        ],
+        "task": "object_delivery",
+        "outcome": "success"
+      },
+      {
+        "agents": [
+          "scanner",
+          "planner"
+        ],
+        "task": "area_analysis",
+        "outcome": "success"
+      },
+      {
+        "agents": [
+          "loader",
+          "carrier"
+        ],
+        "task": "heavy_lift",
+        "outcome": "assisted"
+      }
+    ],
+    "humanoid_ready": true
+  }
+]

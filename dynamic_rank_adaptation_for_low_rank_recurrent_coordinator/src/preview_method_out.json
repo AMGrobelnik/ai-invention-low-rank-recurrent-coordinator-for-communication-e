@@ -1,0 +1,229 @@
+{
+  "examples": [
+    {
+      "input": "What is the difference between OpenCL and CUDA?",
+      "output": "Winner: model_b",
+      "context": {
+        "model_a": "chatglm-6b",
+        "model_b": "koala-13b",
+        "winner": "model_b",
+        "judge": "arena_user_973",
+        "language": "English",
+        "turn": 1,
+        "response_a": "OpenCL and CUDA are two different programming models that are used for parallel computing.OpenCL is a general-purpose\u5e76\u884c\u7f16\u7a0b\u63a5\u53e3 that allows developers to write parallel code that can run on any platform t...",
+        "response_b": "OpenCL and CUDA are both programming languages for parallel computing on GPUs, but they differ in several key ways:\n\n1.   Architecture: OpenCL is a general-purpose parallel computing language, while C...",
+        "token_usage": {
+          "turns": [
+            {
+              "turn_number": 1,
+              "timestamp_offset": 0.0,
+              "input_tokens": 10,
+              "input_length": 47,
+              "response_a_tokens": 171,
+              "response_a_length": 892,
+              "response_b_tokens": 373,
+              "response_b_length": 1905
+            },
+            {
+              "turn_number": 2,
+              "timestamp_offset": 5.0,
+              "input_tokens": 171,
+              "input_length": 892
+            }
+          ],
+          "total_input_tokens": 181,
+          "total_output_tokens_a": 171,
+          "total_output_tokens_b": 373,
+          "total_tokens": 725,
+          "message_lengths": {
+            "input": [
+              47,
+              892
+            ],
+            "response_a": [
+              892
+            ],
+            "response_b": [
+              1905
+            ]
+          },
+          "communication_efficiency": {
+            "avg_tokens_per_turn": 362.5,
+            "input_output_ratio": 0.2496551724137931,
+            "coordination_overhead": 0.2786206896551724
+          }
+        },
+        "api_metadata": {
+          "question_id": "58210e39b3fd4441a2bd4a518bb44c2d",
+          "timestamp": 1682351591.1322,
+          "toxic_chat_tag": {
+            "roberta-large": {
+              "flagged": false,
+              "probability": 0.0083130226
+            },
+            "t5-large": {
+              "flagged": false,
+              "score": 7.94367e-05
+            }
+          },
+          "anony": true
+        }
+      },
+      "dataset": "lmsys/chatbot_arena_conversations",
+      "split": "train",
+      "predict_baseline": "model_b",
+      "predict_method": "model_b",
+      "method": "Dynamic Rank Adaptation for Low-Rank Recurrent Coordinator"
+    },
+    {
+      "input": "Why did my parent not invite me to their wedding?",
+      "output": "Winner: tie",
+      "context": {
+        "model_a": "oasst-pythia-12b",
+        "model_b": "alpaca-13b",
+        "winner": "tie",
+        "judge": "arena_user_973",
+        "language": "English",
+        "turn": 1,
+        "response_a": "It is possible that your parent did not invite you to their wedding for a variety of reasons. It could be that they did not want to burden you with the planning or expense of the event, or they may no...",
+        "response_b": "It is likely that they wanted to keep the guest list small and intimate. Maybe they felt that inviting you would make the event too crowded, or that they wanted to keep the event reserved for close fr...",
+        "token_usage": {
+          "turns": [
+            {
+              "turn_number": 1,
+              "timestamp_offset": 0.0,
+              "input_tokens": 11,
+              "input_length": 49,
+              "response_a_tokens": 139,
+              "response_a_length": 660,
+              "response_b_tokens": 100,
+              "response_b_length": 514
+            },
+            {
+              "turn_number": 2,
+              "timestamp_offset": 5.0,
+              "input_tokens": 139,
+              "input_length": 660
+            }
+          ],
+          "total_input_tokens": 150,
+          "total_output_tokens_a": 139,
+          "total_output_tokens_b": 100,
+          "total_tokens": 389,
+          "message_lengths": {
+            "input": [
+              49,
+              660
+            ],
+            "response_a": [
+              660
+            ],
+            "response_b": [
+              514
+            ]
+          },
+          "communication_efficiency": {
+            "avg_tokens_per_turn": 194.5,
+            "input_output_ratio": 0.3856041131105398,
+            "coordination_overhead": 0.10025706940874037
+          }
+        },
+        "api_metadata": {
+          "question_id": "2564acd09e3942fd97657d05282d4389",
+          "timestamp": 1682351654.6747,
+          "toxic_chat_tag": {
+            "roberta-large": {
+              "flagged": false,
+              "probability": 0.038766861
+            },
+            "t5-large": {
+              "flagged": false,
+              "score": 0.0017759029
+            }
+          },
+          "anony": true
+        }
+      },
+      "dataset": "lmsys/chatbot_arena_conversations",
+      "split": "train",
+      "predict_baseline": "model_a",
+      "predict_method": "model_a",
+      "method": "Dynamic Rank Adaptation for Low-Rank Recurrent Coordinator"
+    },
+    {
+      "input": "Fuji vs. Nikon, which is better?",
+      "output": "Winner: model_b",
+      "context": {
+        "model_a": "koala-13b",
+        "model_b": "oasst-pythia-12b",
+        "winner": "model_b",
+        "judge": "arena_user_973",
+        "language": "English",
+        "turn": 1,
+        "response_a": "Both Fuji and Nikon are popular camera brands that offer a wide range of cameras for different types of photography. It really depends on your specific needs and preferences as to which brand is \"bett...",
+        "response_b": "This is a subjective question and the answer depends on the individual preferences and needs. Both Fujifilm and Nikon are well-known for their high-quality cameras, and the choice between the two ulti...",
+        "token_usage": {
+          "turns": [
+            {
+              "turn_number": 1,
+              "timestamp_offset": 0.0,
+              "input_tokens": 10,
+              "input_length": 32,
+              "response_a_tokens": 212,
+              "response_a_length": 1114,
+              "response_b_tokens": 309,
+              "response_b_length": 1566
+            },
+            {
+              "turn_number": 2,
+              "timestamp_offset": 5.0,
+              "input_tokens": 212,
+              "input_length": 1114
+            }
+          ],
+          "total_input_tokens": 222,
+          "total_output_tokens_a": 212,
+          "total_output_tokens_b": 309,
+          "total_tokens": 743,
+          "message_lengths": {
+            "input": [
+              32,
+              1114
+            ],
+            "response_a": [
+              1114
+            ],
+            "response_b": [
+              1566
+            ]
+          },
+          "communication_efficiency": {
+            "avg_tokens_per_turn": 371.5,
+            "input_output_ratio": 0.29878869448183043,
+            "coordination_overhead": 0.13055181695827725
+          }
+        },
+        "api_metadata": {
+          "question_id": "90bfd142157948aba01931726c888e7f",
+          "timestamp": 1682351708.9351,
+          "toxic_chat_tag": {
+            "roberta-large": {
+              "flagged": false,
+              "probability": 0.0259171631
+            },
+            "t5-large": {
+              "flagged": false,
+              "score": 0.00019426
+            }
+          },
+          "anony": true
+        }
+      },
+      "dataset": "lmsys/chatbot_arena_conversations",
+      "split": "train",
+      "predict_baseline": "model_b",
+      "predict_method": "model_b",
+      "method": "Dynamic Rank Adaptation for Low-Rank Recurrent Coordinator"
+    }
+  ]
+}

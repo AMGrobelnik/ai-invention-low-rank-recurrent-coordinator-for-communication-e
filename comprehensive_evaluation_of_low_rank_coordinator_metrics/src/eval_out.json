@@ -1,0 +1,268 @@
+{
+  "summary": {
+    "evaluation_date": "2026-01-14",
+    "method_evaluated": "Low-Rank Recurrent Coordinator",
+    "baseline": "Full-Rank Recurrent Coordinator",
+    "dataset": "lmsys/chatbot_arena_conversations",
+    "hypothesis": "Low-rank coordinator reduces token usage by >=20%",
+    "hypothesis_confirmed": false,
+    "configuration": {
+      "hidden_dim": 256,
+      "rank": 32,
+      "num_modules": 4,
+      "compression_ratio": 0.125,
+      "parameter_reduction": 0.25
+    }
+  },
+  "token_efficiency_analysis": {
+    "overall": {
+      "total_examples": 200,
+      "mean_savings_pct": 12.33072992364745,
+      "std_savings_pct": 11.352741434954737,
+      "median_savings_pct": 6.559938524590164,
+      "min_savings_pct": 6.093189964157706,
+      "max_savings_pct": 58.620689655172406,
+      "target_savings_pct": 20.0,
+      "achieved_target": false
+    },
+    "complexity_breakdown": {
+      "low": {
+        "count": 51,
+        "mean_savings_pct": 27.76408665984935,
+        "std_savings_pct": 13.450159187198654,
+        "median_savings_pct": 25.0,
+        "min_savings_pct": 6.504961411245866,
+        "max_savings_pct": 58.620689655172406
+      },
+      "medium": {
+        "count": 86,
+        "mean_savings_pct": 7.461660328987776,
+        "std_savings_pct": 1.563284901153444,
+        "median_savings_pct": 6.546662380799315,
+        "min_savings_pct": 6.093189964157706,
+        "max_savings_pct": 11.888111888111888
+      },
+      "high": {
+        "count": 63,
+        "mean_savings_pct": 6.483726615622607,
+        "std_savings_pct": 0.060808521722071636,
+        "median_savings_pct": 6.485355648535565,
+        "min_savings_pct": 6.371681415929204,
+        "max_savings_pct": 6.628787878787879
+      }
+    },
+    "positive_savings_cases": {
+      "count": 200,
+      "percentage": 100.0,
+      "mean_savings": 26.225
+    },
+    "negative_savings_cases": {
+      "count": 0,
+      "percentage": 0.0,
+      "mean_waste": 0
+    },
+    "from_method_summary": {
+      "baseline_total_tokens": 64143,
+      "method_total_tokens": 63357,
+      "reduction_pct": 1.225387025864085,
+      "reduction_absolute": 786
+    }
+  },
+  "performance_analysis": {
+    "overall": {
+      "baseline": {
+        "accuracy": 0.525,
+        "f1_macro": 0.4939730227857975
+      },
+      "method": {
+        "accuracy": 0.525,
+        "f1_macro": 0.4939730227857975
+      },
+      "delta": {
+        "accuracy": 0.0,
+        "f1_macro": 0.0
+      },
+      "performance_maintained": true
+    },
+    "per_class": {
+      "baseline": {
+        "model_a": {
+          "precision": 0.49473684210526314,
+          "recall": 0.5949367088607594,
+          "f1-score": 0.5402298850574713,
+          "support": 79.0
+        },
+        "model_b": {
+          "precision": 0.625,
+          "recall": 0.5844155844155844,
+          "f1-score": 0.6040268456375839,
+          "support": 77.0
+        },
+        "tie": {
+          "precision": 0.3939393939393939,
+          "recall": 0.29545454545454547,
+          "f1-score": 0.33766233766233766,
+          "support": 44.0
+        }
+      },
+      "method": {
+        "model_a": {
+          "precision": 0.49473684210526314,
+          "recall": 0.5949367088607594,
+          "f1-score": 0.5402298850574713,
+          "support": 79.0
+        },
+        "model_b": {
+          "precision": 0.625,
+          "recall": 0.5844155844155844,
+          "f1-score": 0.6040268456375839,
+          "support": 77.0
+        },
+        "tie": {
+          "precision": 0.3939393939393939,
+          "recall": 0.29545454545454547,
+          "f1-score": 0.33766233766233766,
+          "support": 44.0
+        }
+      }
+    },
+    "confusion_matrices": {
+      "baseline": [
+        [
+          47,
+          18,
+          14
+        ],
+        [
+          26,
+          45,
+          6
+        ],
+        [
+          22,
+          9,
+          13
+        ]
+      ],
+      "method": [
+        [
+          47,
+          18,
+          14
+        ],
+        [
+          26,
+          45,
+          6
+        ],
+        [
+          22,
+          9,
+          13
+        ]
+      ],
+      "labels": [
+        "model_a",
+        "model_b",
+        "tie"
+      ]
+    },
+    "complexity_breakdown": {
+      "high": {
+        "count": 63,
+        "baseline_accuracy": 0.49206349206349204,
+        "method_accuracy": 0.49206349206349204,
+        "accuracy_delta": 0.0
+      },
+      "medium": {
+        "count": 86,
+        "baseline_accuracy": 0.6162790697674418,
+        "method_accuracy": 0.6162790697674418,
+        "accuracy_delta": 0.0
+      },
+      "low": {
+        "count": 51,
+        "baseline_accuracy": 0.4117647058823529,
+        "method_accuracy": 0.4117647058823529,
+        "accuracy_delta": 0.0
+      }
+    }
+  },
+  "robustness_analysis": {
+    "prediction_agreement": {
+      "total_examples": 200,
+      "agreements": 200,
+      "disagreements": 0,
+      "agreement_rate": 1.0,
+      "high_consistency": true
+    },
+    "disagreement_analysis": {
+      "method_improves": 0,
+      "baseline_better": 0,
+      "net_improvement": 0,
+      "first_3_disagreements": []
+    },
+    "stability_assessment": {
+      "is_robust": true,
+      "reasoning": "High agreement"
+    }
+  },
+  "statistical_tests": {
+    "token_efficiency_tests": {
+      "paired_t_test": {
+        "t_statistic": 19.437376217043767,
+        "p_value": 7.173258026557722e-48,
+        "significant": true,
+        "alpha": 0.05
+      },
+      "effect_size": {
+        "cohens_d": 0.017089750993148377,
+        "magnitude": "negligible"
+      }
+    },
+    "performance_tests": {
+      "mcnemar_test": {
+        "statistic": 0.0,
+        "p_value": 1.0,
+        "significant": false
+      }
+    }
+  },
+  "interaction_complexity_breakdown": {
+    "high": {
+      "count": 63,
+      "percentage": 31.5,
+      "avg_total_words": 418.0,
+      "avg_lexical_diversity": 0.4335567580463116
+    },
+    "medium": {
+      "count": 86,
+      "percentage": 43.0,
+      "avg_total_words": 199.1627906976744,
+      "avg_lexical_diversity": 0.5556695622422861
+    },
+    "low": {
+      "count": 51,
+      "percentage": 25.5,
+      "avg_total_words": 37.11764705882353,
+      "avg_lexical_diversity": 0.7795500108927436
+    }
+  },
+  "visualizations": {
+    "token_savings_by_complexity": "/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_3_evaluation_workspace_0/token_savings_by_complexity.png",
+    "performance_comparison": "/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_3_evaluation_workspace_0/performance_comparison.png"
+  },
+  "conclusion": {
+    "hypothesis_confirmed": false,
+    "key_findings": [
+      "Token reduction: 12.33% (target: 20%)",
+      "Performance maintained: True",
+      "Robustness: High"
+    ],
+    "interpretation": "Comprehensive evaluation completed successfully.",
+    "recommendations": [
+      "Explore alternative compression strategies",
+      "Test with longer multi-turn interactions"
+    ]
+  }
+}

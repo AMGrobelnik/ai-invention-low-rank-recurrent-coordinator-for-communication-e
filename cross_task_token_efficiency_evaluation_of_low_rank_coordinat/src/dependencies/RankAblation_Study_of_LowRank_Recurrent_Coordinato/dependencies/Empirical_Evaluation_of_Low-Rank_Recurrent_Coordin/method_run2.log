@@ -1,0 +1,248 @@
+2026-01-14 01:03:23,236 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 01:03:23,236 | INFO    | main                 | [94mLOW-RANK RECURRENT COORDINATOR EXPERIMENT[0m
+2026-01-14 01:03:23,236 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 01:03:23,236 | INFO    | main                 | Workspace directory: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_2_experiment_workspace_0
+2026-01-14 01:03:23,236 | INFO    | main                 | Data path: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_2_experiment_workspace_0/dependencies/Multi-Agent_Coordination_Communication-Efficiency/mini_data_out.json
+2026-01-14 01:03:23,236 | INFO    | load_dataset         | [94mLoading dataset from: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_2_experiment_workspace_0/dependencies/Multi-Agent_Coordination_Communication-Efficiency/mini_data_out.json[0m
+2026-01-14 01:03:23,237 | INFO    | load_dataset         | [92mLoaded 3 examples from dataset[0m
+2026-01-14 01:03:23,237 | DEBUG   | load_dataset         | Example structure: ['input', 'context', 'output', 'dataset', 'split']
+2026-01-14 01:03:23,237 | DEBUG   | load_dataset         | First input: What is the difference between OpenCL and CUDA?
+2026-01-14 01:03:23,237 | INFO    | main                 | Ground truth distribution: {np.str_('model_b'): np.int64(2), np.str_('tie'): np.int64(1)}
+2026-01-14 01:03:23,237 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 01:03:23,237 | INFO    | main                 | [94mBASELINE: Full-Rank Coordinator[0m
+2026-01-14 01:03:23,237 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 01:03:23,240 | INFO    | __init__             | [92mFullRankCoordinator initialized: hidden_dim=256[0m
+2026-01-14 01:03:23,240 | INFO    | __init__             |   Weight matrix shape: (256, 256)
+2026-01-14 01:03:23,240 | INFO    | __init__             |   Total parameters: 65536
+2026-01-14 01:03:23,470 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 01:03:23,471 | INFO    | run_experiment       | 
+[94m================================================================================[0m
+2026-01-14 01:03:23,471 | INFO    | run_experiment       | [94mRunning experiment: Baseline (Full-Rank)[0m
+2026-01-14 01:03:23,471 | INFO    | run_experiment       | [94m================================================================================[0m
+
+2026-01-14 01:03:23,471 | INFO    | run_experiment       | 
+[96mProcessing example 1/3[0m
+2026-01-14 01:03:23,471 | DEBUG   | run_experiment       | Input: What is the difference between OpenCL and CUDA?
+2026-01-14 01:03:23,471 | DEBUG   | reset                | Coordinator state reset
+2026-01-14 01:03:23,471 | DEBUG   | run_experiment       | Agent A (chatglm-6b): OpenCL and CUDA are two different programming models that are used for parallel ... (892 chars total)
+2026-01-14 01:03:23,471 | DEBUG   | run_experiment       | Agent B (koala-13b): OpenCL and CUDA are both programming languages for parallel computing on GPUs, b... (1905 chars total)
+2026-01-14 01:03:23,471 | DEBUG   | step                 | FullRankCoordinator.step with 2 agent outputs
+2026-01-14 01:03:23,472 | DEBUG   | _encode_outputs      |   Encoded 2 outputs into 256 features
+2026-01-14 01:03:23,472 | DEBUG   | step                 |   Encoded features shape: (256,)
+2026-01-14 01:03:23,472 | DEBUG   | step                 |   State norm after update: 1.0000
+2026-01-14 01:03:23,472 | DEBUG   | _generate_message    |   Generated message with 0 components
+2026-01-14 01:03:23,472 | DEBUG   | step                 |   Coordinator message length: 0
+2026-01-14 01:03:23,482 | DEBUG   | count_tokens         | Counted 171 tokens in text: OpenCL and CUDA are two different programming mode... (892 chars total)
+2026-01-14 01:03:23,482 | DEBUG   | log_coordinator_step |   Agent 0 output: 171 tokens
+2026-01-14 01:03:23,483 | DEBUG   | count_tokens         | Counted 373 tokens in text: OpenCL and CUDA are both programming languages for... (1905 chars total)
+2026-01-14 01:03:23,483 | DEBUG   | log_coordinator_step |   Agent 1 output: 373 tokens
+2026-01-14 01:03:23,484 | INFO    | log_coordinator_step | [96mStep 1: 544 tokens (total: 544)[0m
+2026-01-14 01:03:23,484 | DEBUG   | predict_winner       |   Prediction: model_b (score_a=1028.3, score_b=2196.1, confidence=1.5281)
+2026-01-14 01:03:23,484 | INFO    | run_experiment       | [92mEpisode 1 complete: prediction=model_b, tokens=544[0m
+2026-01-14 01:03:23,484 | INFO    | run_experiment       | 
+[96mProcessing example 2/3[0m
+2026-01-14 01:03:23,484 | DEBUG   | run_experiment       | Input: Why did my parent not invite me to their wedding?
+2026-01-14 01:03:23,484 | DEBUG   | reset                | Coordinator state reset
+2026-01-14 01:03:23,485 | DEBUG   | run_experiment       | Agent A (oasst-pythia-12b): It is possible that your parent did not invite you to their wedding for a variet... (660 chars total)
+2026-01-14 01:03:23,485 | DEBUG   | run_experiment       | Agent B (alpaca-13b): It is likely that they wanted to keep the guest list small and intimate. Maybe t... (514 chars total)
+2026-01-14 01:03:23,485 | DEBUG   | step                 | FullRankCoordinator.step with 2 agent outputs
+2026-01-14 01:03:23,485 | DEBUG   | _encode_outputs      |   Encoded 2 outputs into 256 features
+2026-01-14 01:03:23,485 | DEBUG   | step                 |   Encoded features shape: (256,)
+2026-01-14 01:03:23,486 | DEBUG   | step                 |   State norm after update: 1.0000
+2026-01-14 01:03:23,486 | DEBUG   | _generate_message    |   Generated message with 1 components
+2026-01-14 01:03:23,486 | DEBUG   | step                 |   Coordinator message length: 9
+2026-01-14 01:03:23,487 | DEBUG   | count_tokens         | Counted 139 tokens in text: It is possible that your parent did not invite you... (660 chars total)
+2026-01-14 01:03:23,487 | DEBUG   | log_coordinator_step |   Agent 0 output: 139 tokens
+2026-01-14 01:03:23,488 | DEBUG   | count_tokens         | Counted 100 tokens in text: It is likely that they wanted to keep the guest li... (514 chars total)
+2026-01-14 01:03:23,488 | DEBUG   | log_coordinator_step |   Agent 1 output: 100 tokens
+2026-01-14 01:03:23,488 | DEBUG   | count_tokens         | Counted 6 tokens in text: dim0:0.15
+2026-01-14 01:03:23,488 | DEBUG   | log_coordinator_step |   Coordinator message: 6 tokens
+2026-01-14 01:03:23,488 | INFO    | log_coordinator_step | [96mStep 2: 245 tokens (total: 789)[0m
+2026-01-14 01:03:23,488 | DEBUG   | predict_winner       |   Prediction: model_a (score_a=768.6, score_b=598.6, confidence=1.6454)
+2026-01-14 01:03:23,489 | INFO    | run_experiment       | [92mEpisode 2 complete: prediction=model_a, tokens=245[0m
+2026-01-14 01:03:23,489 | INFO    | run_experiment       | 
+[96mProcessing example 3/3[0m
+2026-01-14 01:03:23,489 | DEBUG   | run_experiment       | Input: Fuji vs. Nikon, which is better?
+2026-01-14 01:03:23,489 | DEBUG   | reset                | Coordinator state reset
+2026-01-14 01:03:23,489 | DEBUG   | run_experiment       | Agent A (koala-13b): Both Fuji and Nikon are popular camera brands that offer a wide range of cameras... (1114 chars total)
+2026-01-14 01:03:23,489 | DEBUG   | run_experiment       | Agent B (oasst-pythia-12b): This is a subjective question and the answer depends on the individual preferenc... (1566 chars total)
+2026-01-14 01:03:23,489 | DEBUG   | step                 | FullRankCoordinator.step with 2 agent outputs
+2026-01-14 01:03:23,489 | DEBUG   | _encode_outputs      |   Encoded 2 outputs into 256 features
+2026-01-14 01:03:23,489 | DEBUG   | step                 |   Encoded features shape: (256,)
+2026-01-14 01:03:23,490 | DEBUG   | step                 |   State norm after update: 1.0000
+2026-01-14 01:03:23,490 | DEBUG   | _generate_message    |   Generated message with 0 components
+2026-01-14 01:03:23,490 | DEBUG   | step                 |   Coordinator message length: 0
+2026-01-14 01:03:23,490 | DEBUG   | count_tokens         | Counted 212 tokens in text: Both Fuji and Nikon are popular camera brands that... (1114 chars total)
+2026-01-14 01:03:23,490 | DEBUG   | log_coordinator_step |   Agent 0 output: 212 tokens
+2026-01-14 01:03:23,491 | DEBUG   | count_tokens         | Counted 309 tokens in text: This is a subjective question and the answer depen... (1566 chars total)
+2026-01-14 01:03:23,491 | DEBUG   | log_coordinator_step |   Agent 1 output: 309 tokens
+2026-01-14 01:03:23,491 | INFO    | log_coordinator_step | [96mStep 3: 521 tokens (total: 1310)[0m
+2026-01-14 01:03:23,491 | DEBUG   | predict_winner       |   Prediction: model_b (score_a=1293.7, score_b=1818.6, confidence=1.6129)
+2026-01-14 01:03:23,491 | INFO    | run_experiment       | [92mEpisode 3 complete: prediction=model_b, tokens=521[0m
+2026-01-14 01:03:23,491 | INFO    | run_experiment       | 
+[92mExperiment Baseline (Full-Rank) complete: 3 predictions made[0m
+2026-01-14 01:03:23,491 | INFO    | evaluate_performance | 
+[94mEvaluating performance...[0m
+2026-01-14 01:03:23,493 | INFO    | evaluate_performance |   Accuracy: 0.6667
+2026-01-14 01:03:23,498 | INFO    | evaluate_performance |   F1 (macro): 0.3333
+2026-01-14 01:03:23,498 | INFO    | evaluate_performance |   F1 (weighted): 0.6667
+2026-01-14 01:03:23,498 | INFO    | evaluate_performance | [92mPerformance evaluation complete[0m
+2026-01-14 01:03:23,499 | DEBUG   | get_stats            | Token stats: {'total_tokens': 1310, 'num_episodes': 3, 'mean_tokens_per_episode': np.float64(436.6666666666667), 'std_tokens_per_episode': np.float64(135.85367945779836), 'call_count': 3}
+2026-01-14 01:03:23,499 | INFO    | main                 | 
+[92mBaseline Results:[0m
+2026-01-14 01:03:23,499 | INFO    | main                 |   Total tokens: 1310
+2026-01-14 01:03:23,499 | INFO    | main                 |   Mean tokens/episode: 436.67
+2026-01-14 01:03:23,499 | INFO    | main                 |   Accuracy: 0.6667
+2026-01-14 01:03:23,499 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 01:03:23,499 | INFO    | main                 | [94mMETHOD: Low-Rank Coordinator[0m
+2026-01-14 01:03:23,499 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 01:03:23,501 | INFO    | __init__             | [92mLowRankRecurrentCoordinator initialized:[0m
+2026-01-14 01:03:23,502 | INFO    | __init__             |   hidden_dim=256, rank=32, num_modules=4
+2026-01-14 01:03:23,503 | INFO    | __init__             |   Compression ratio: 12.50%
+2026-01-14 01:03:23,503 | INFO    | __init__             |   Parameter reduction: 25.00% of full-rank
+2026-01-14 01:03:23,503 | INFO    | __init__             |   Active modules per step: 2/4
+2026-01-14 01:03:23,504 | INFO    | __init__             | [92mTokenTracker initialized with model: gpt-4[0m
+2026-01-14 01:03:23,504 | INFO    | run_experiment       | 
+[94m================================================================================[0m
+2026-01-14 01:03:23,504 | INFO    | run_experiment       | [94mRunning experiment: Method (Low-Rank)[0m
+2026-01-14 01:03:23,504 | INFO    | run_experiment       | [94m================================================================================[0m
+
+2026-01-14 01:03:23,504 | INFO    | run_experiment       | 
+[96mProcessing example 1/3[0m
+2026-01-14 01:03:23,504 | DEBUG   | run_experiment       | Input: What is the difference between OpenCL and CUDA?
+2026-01-14 01:03:23,505 | DEBUG   | reset                | Coordinator state reset
+2026-01-14 01:03:23,505 | DEBUG   | run_experiment       | Agent A (chatglm-6b): OpenCL and CUDA are two different programming models that are used for parallel ... (892 chars total)
+2026-01-14 01:03:23,505 | DEBUG   | run_experiment       | Agent B (koala-13b): OpenCL and CUDA are both programming languages for parallel computing on GPUs, b... (1905 chars total)
+2026-01-14 01:03:23,505 | DEBUG   | step                 | LowRankCoordinator.step with 2 agent outputs
+2026-01-14 01:03:23,505 | DEBUG   | _encode_outputs      |   Encoded 2 outputs into 256 features
+2026-01-14 01:03:23,506 | DEBUG   | step                 |   Encoded features shape: (256,)
+2026-01-14 01:03:23,506 | DEBUG   | _select_active_modules |   Module scores: [(3, '0.0000'), (2, '0.0000'), (1, '0.0000'), (0, '0.0000')]
+2026-01-14 01:03:23,506 | DEBUG   | step                 |   Active modules: [3, 2]
+2026-01-14 01:03:23,506 | DEBUG   | step                 |   State projection shape: (32,)
+2026-01-14 01:03:23,506 | DEBUG   | step                 |     Module 3 update norm: 0.0000
+2026-01-14 01:03:23,506 | DEBUG   | step                 |     Module 2 update norm: 0.0000
+2026-01-14 01:03:23,507 | DEBUG   | step                 |   State norm after update: 1.0000
+2026-01-14 01:03:23,507 | DEBUG   | _generate_compressed_message |   Generated compressed message with 0 components (vs 256 in full-rank)
+2026-01-14 01:03:23,507 | DEBUG   | step                 |   Coordinator message length: 0
+2026-01-14 01:03:23,507 | DEBUG   | count_tokens         | Counted 171 tokens in text: OpenCL and CUDA are two different programming mode... (892 chars total)
+2026-01-14 01:03:23,507 | DEBUG   | log_coordinator_step |   Agent 0 output: 171 tokens
+2026-01-14 01:03:23,507 | DEBUG   | count_tokens         | Counted 373 tokens in text: OpenCL and CUDA are both programming languages for... (1905 chars total)
+2026-01-14 01:03:23,507 | DEBUG   | log_coordinator_step |   Agent 1 output: 373 tokens
+2026-01-14 01:03:23,507 | INFO    | log_coordinator_step | [96mStep 1: 544 tokens (total: 544)[0m
+2026-01-14 01:03:23,508 | DEBUG   | predict_winner       |   Prediction: model_b (score_a=1028.3, score_b=2196.1, confidence=1.5281)
+2026-01-14 01:03:23,508 | INFO    | run_experiment       | [92mEpisode 1 complete: prediction=model_b, tokens=544[0m
+2026-01-14 01:03:23,508 | INFO    | run_experiment       | 
+[96mProcessing example 2/3[0m
+2026-01-14 01:03:23,508 | DEBUG   | run_experiment       | Input: Why did my parent not invite me to their wedding?
+2026-01-14 01:03:23,508 | DEBUG   | reset                | Coordinator state reset
+2026-01-14 01:03:23,508 | DEBUG   | run_experiment       | Agent A (oasst-pythia-12b): It is possible that your parent did not invite you to their wedding for a variet... (660 chars total)
+2026-01-14 01:03:23,508 | DEBUG   | run_experiment       | Agent B (alpaca-13b): It is likely that they wanted to keep the guest list small and intimate. Maybe t... (514 chars total)
+2026-01-14 01:03:23,508 | DEBUG   | step                 | LowRankCoordinator.step with 2 agent outputs
+2026-01-14 01:03:23,508 | DEBUG   | _encode_outputs      |   Encoded 2 outputs into 256 features
+2026-01-14 01:03:23,508 | DEBUG   | step                 |   Encoded features shape: (256,)
+2026-01-14 01:03:23,508 | DEBUG   | _select_active_modules |   Module scores: [(3, '0.0000'), (2, '0.0000'), (1, '0.0000'), (0, '0.0000')]
+2026-01-14 01:03:23,508 | DEBUG   | step                 |   Active modules: [3, 2]
+2026-01-14 01:03:23,508 | DEBUG   | step                 |   State projection shape: (32,)
+2026-01-14 01:03:23,509 | DEBUG   | step                 |     Module 3 update norm: 0.0000
+2026-01-14 01:03:23,509 | DEBUG   | step                 |     Module 2 update norm: 0.0000
+2026-01-14 01:03:23,509 | DEBUG   | step                 |   State norm after update: 1.0000
+2026-01-14 01:03:23,509 | DEBUG   | _generate_compressed_message |   Generated compressed message with 0 components (vs 256 in full-rank)
+2026-01-14 01:03:23,509 | DEBUG   | step                 |   Coordinator message length: 0
+2026-01-14 01:03:23,509 | DEBUG   | count_tokens         | Counted 139 tokens in text: It is possible that your parent did not invite you... (660 chars total)
+2026-01-14 01:03:23,509 | DEBUG   | log_coordinator_step |   Agent 0 output: 139 tokens
+2026-01-14 01:03:23,509 | DEBUG   | count_tokens         | Counted 100 tokens in text: It is likely that they wanted to keep the guest li... (514 chars total)
+2026-01-14 01:03:23,509 | DEBUG   | log_coordinator_step |   Agent 1 output: 100 tokens
+2026-01-14 01:03:23,510 | INFO    | log_coordinator_step | [96mStep 2: 239 tokens (total: 783)[0m
+2026-01-14 01:03:23,510 | DEBUG   | predict_winner       |   Prediction: model_a (score_a=768.6, score_b=598.6, confidence=1.6454)
+2026-01-14 01:03:23,510 | INFO    | run_experiment       | [92mEpisode 2 complete: prediction=model_a, tokens=239[0m
+2026-01-14 01:03:23,510 | INFO    | run_experiment       | 
+[96mProcessing example 3/3[0m
+2026-01-14 01:03:23,510 | DEBUG   | run_experiment       | Input: Fuji vs. Nikon, which is better?
+2026-01-14 01:03:23,510 | DEBUG   | reset                | Coordinator state reset
+2026-01-14 01:03:23,510 | DEBUG   | run_experiment       | Agent A (koala-13b): Both Fuji and Nikon are popular camera brands that offer a wide range of cameras... (1114 chars total)
+2026-01-14 01:03:23,510 | DEBUG   | run_experiment       | Agent B (oasst-pythia-12b): This is a subjective question and the answer depends on the individual preferenc... (1566 chars total)
+2026-01-14 01:03:23,510 | DEBUG   | step                 | LowRankCoordinator.step with 2 agent outputs
+2026-01-14 01:03:23,510 | DEBUG   | _encode_outputs      |   Encoded 2 outputs into 256 features
+2026-01-14 01:03:23,511 | DEBUG   | step                 |   Encoded features shape: (256,)
+2026-01-14 01:03:23,511 | DEBUG   | _select_active_modules |   Module scores: [(3, '0.0000'), (2, '0.0000'), (1, '0.0000'), (0, '0.0000')]
+2026-01-14 01:03:23,511 | DEBUG   | step                 |   Active modules: [3, 2]
+2026-01-14 01:03:23,511 | DEBUG   | step                 |   State projection shape: (32,)
+2026-01-14 01:03:23,511 | DEBUG   | step                 |     Module 3 update norm: 0.0000
+2026-01-14 01:03:23,511 | DEBUG   | step                 |     Module 2 update norm: 0.0000
+2026-01-14 01:03:23,511 | DEBUG   | step                 |   State norm after update: 1.0000
+2026-01-14 01:03:23,511 | DEBUG   | _generate_compressed_message |   Generated compressed message with 0 components (vs 256 in full-rank)
+2026-01-14 01:03:23,511 | DEBUG   | step                 |   Coordinator message length: 0
+2026-01-14 01:03:23,512 | DEBUG   | count_tokens         | Counted 212 tokens in text: Both Fuji and Nikon are popular camera brands that... (1114 chars total)
+2026-01-14 01:03:23,512 | DEBUG   | log_coordinator_step |   Agent 0 output: 212 tokens
+2026-01-14 01:03:23,512 | DEBUG   | count_tokens         | Counted 309 tokens in text: This is a subjective question and the answer depen... (1566 chars total)
+2026-01-14 01:03:23,512 | DEBUG   | log_coordinator_step |   Agent 1 output: 309 tokens
+2026-01-14 01:03:23,512 | INFO    | log_coordinator_step | [96mStep 3: 521 tokens (total: 1304)[0m
+2026-01-14 01:03:23,512 | DEBUG   | predict_winner       |   Prediction: model_b (score_a=1293.7, score_b=1818.6, confidence=1.6129)
+2026-01-14 01:03:23,512 | INFO    | run_experiment       | [92mEpisode 3 complete: prediction=model_b, tokens=521[0m
+2026-01-14 01:03:23,512 | INFO    | run_experiment       | 
+[92mExperiment Method (Low-Rank) complete: 3 predictions made[0m
+2026-01-14 01:03:23,512 | INFO    | evaluate_performance | 
+[94mEvaluating performance...[0m
+2026-01-14 01:03:23,513 | INFO    | evaluate_performance |   Accuracy: 0.6667
+2026-01-14 01:03:23,518 | INFO    | evaluate_performance |   F1 (macro): 0.3333
+2026-01-14 01:03:23,518 | INFO    | evaluate_performance |   F1 (weighted): 0.6667
+2026-01-14 01:03:23,518 | INFO    | evaluate_performance | [92mPerformance evaluation complete[0m
+2026-01-14 01:03:23,518 | DEBUG   | get_stats            | Token stats: {'total_tokens': 1304, 'num_episodes': 3, 'mean_tokens_per_episode': np.float64(434.6666666666667), 'std_tokens_per_episode': np.float64(138.67548048912212), 'call_count': 3}
+2026-01-14 01:03:23,519 | INFO    | main                 | 
+[92mMethod Results:[0m
+2026-01-14 01:03:23,519 | INFO    | main                 |   Total tokens: 1304
+2026-01-14 01:03:23,519 | INFO    | main                 |   Mean tokens/episode: 434.67
+2026-01-14 01:03:23,519 | INFO    | main                 |   Accuracy: 0.6667
+2026-01-14 01:03:23,520 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 01:03:23,520 | INFO    | main                 | [94mCOMPARISON & STATISTICAL ANALYSIS[0m
+2026-01-14 01:03:23,520 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 01:03:23,520 | INFO    | main                 | [96mToken Efficiency:[0m
+2026-01-14 01:03:23,520 | INFO    | main                 |   Baseline total: 1310
+2026-01-14 01:03:23,520 | INFO    | main                 |   Method total: 1304
+2026-01-14 01:03:23,520 | INFO    | main                 |   Reduction: 0.46%
+2026-01-14 01:03:23,520 | INFO    | main                 |   Target: >15% reduction
+2026-01-14 01:03:23,521 | INFO    | main                 |   Success: False
+2026-01-14 01:03:23,521 | INFO    | main                 | 
+[96mTask Performance:[0m
+2026-01-14 01:03:23,521 | INFO    | main                 |   Baseline accuracy: 0.6667
+2026-01-14 01:03:23,521 | INFO    | main                 |   Method accuracy: 0.6667
+2026-01-14 01:03:23,521 | INFO    | main                 |   Delta: +0.0000
+2026-01-14 01:03:23,521 | INFO    | main                 |   Maintained/improved: True
+2026-01-14 01:03:23,521 | INFO    | compute_statistical_significance | 
+[94mComputing statistical significance...[0m
+2026-01-14 01:03:23,523 | INFO    | compute_statistical_significance |   Paired t-test: t=1.0000, p=0.4226, significant=False
+2026-01-14 01:03:23,524 | INFO    | compute_statistical_significance |   Effect size (Cohen's d): 0.0146
+2026-01-14 01:03:23,524 | INFO    | compute_statistical_significance | [92mStatistical tests complete[0m
+2026-01-14 01:03:23,524 | INFO    | main                 | 
+[96mOverall Hypothesis Test:[0m
+2026-01-14 01:03:23,525 | INFO    | main                 |   Token reduction >15%: False
+2026-01-14 01:03:23,525 | INFO    | main                 |   Performance maintained: True
+2026-01-14 01:03:23,525 | INFO    | main                 |   Statistically significant: False
+2026-01-14 01:03:23,525 | INFO    | main                 |   SUCCESS: False
+2026-01-14 01:03:23,526 | INFO    | main                 | 
+[92mResults saved to: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_2_experiment_workspace_0/method_out.json[0m
+2026-01-14 01:03:23,526 | INFO    | main                 | [92mSummary metrics saved to: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260114_003334/invention_loop/iter_2_experiment_workspace_0/method_summary.json[0m
+2026-01-14 01:03:23,526 | INFO    | main                 | 
+[94m================================================================================[0m
+2026-01-14 01:03:23,526 | INFO    | main                 | [94mEXPERIMENT SUMMARY[0m
+2026-01-14 01:03:23,526 | INFO    | main                 | [94m================================================================================[0m
+
+2026-01-14 01:03:23,527 | INFO    | main                 | Method: Low-Rank Recurrent Coordinator
+2026-01-14 01:03:23,527 | INFO    | main                 | Baseline: Full-Rank Recurrent Coordinator
+2026-01-14 01:03:23,527 | INFO    | main                 | Examples processed: 3
+2026-01-14 01:03:23,527 | INFO    | main                 | 
+[96mKey Findings:[0m
+2026-01-14 01:03:23,527 | INFO    | main                 |   Token reduction: 0.46% (BELOW TARGET)
+2026-01-14 01:03:23,527 | INFO    | main                 |   Accuracy maintained: YES (Δ=+0.0000)
+2026-01-14 01:03:23,527 | INFO    | main                 |   Statistical significance: NO (p=0.4226)
+2026-01-14 01:03:23,527 | INFO    | main                 | 
+[91mHYPOTHESIS NOT CONFIRMED[0m
+

@@ -1,0 +1,13 @@
+[project]
+name = "low-rank-coordinator-eval"
+version = "0.1.0"
+description = "Cross-Task Token Efficiency Evaluation"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"

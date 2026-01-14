@@ -1,0 +1,32 @@
+{
+  "artifact_type": "formal_proof",
+  "theorem_title": "Proof of Token Savings Upper Bound via Low-Rank Coordinator Rank",
+  "proof_system": "Lean 4",
+  "verification_status": "verified",
+  "main_result": "Δ(r) = (n - r) * T",
+  "main_theorem_name": "token_savings_exact_formula",
+  "lemma_count": 7,
+  "all_lemmas_proved": true,
+  "file_references": {
+    "lean_code": "proof.lean",
+    "json_output": "proof_out.json"
+  },
+  "key_insights": [
+    "Token savings are exactly characterized by rank reduction",
+    "Savings are monotone decreasing in rank",
+    "Maximum savings occur at minimal rank (rank 0)",
+    "The bound is tight (equality holds)"
+  ],
+  "mathematical_domain": "communication complexity, linear algebra",
+  "tactics_used": [
+    "rw",
+    "exact",
+    "simp",
+    "omega",
+    "apply",
+    "by_cases"
+  ],
+  "imports": [
+    "Mathlib.Tactic"
+  ]
+}

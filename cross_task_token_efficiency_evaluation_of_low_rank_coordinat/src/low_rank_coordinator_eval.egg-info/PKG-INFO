@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: low-rank-coordinator-eval
+Version: 0.1.0
+Summary: Cross-Task Token Efficiency Evaluation
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: scipy>=1.11.0

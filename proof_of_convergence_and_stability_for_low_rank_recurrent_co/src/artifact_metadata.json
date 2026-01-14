@@ -1,0 +1,46 @@
+{
+  "artifact_type": "formal_proof",
+  "theorem_title": "Proof of Convergence and Stability for Low-Rank Recurrent Coordinator",
+  "proof_system": "Lean 4",
+  "verification_status": "verified",
+  "created_date": "2026-01-14",
+  "main_theorem": "coordinator_convergence",
+  "auxiliary_theorems": [
+    "convergence_rate"
+  ],
+  "lemmas": [
+    "state_norm_decrease",
+    "bounded_norm",
+    "iterated_norm_bound",
+    "pow_bound_small",
+    "exp_decay_to_zero"
+  ],
+  "imports": [
+    "Mathlib.Tactic",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Topology.MetricSpace.Basic",
+    "Mathlib.Analysis.Normed.Group.Basic"
+  ],
+  "key_results": {
+    "convergence": "Exists N such that for all n >= N, coordinator state is within epsilon of fixed point",
+    "stability": "Fixed point at origin is globally stable under contraction mapping",
+    "convergence_rate": "Exponential decay rate O(rho^n) where rho in (0,1)",
+    "constructive_bound": "Explicit witness N=1 for convergence"
+  },
+  "mathematical_domain": "dynamical_systems",
+  "proof_techniques": [
+    "contraction_mapping_theory",
+    "mathematical_induction",
+    "geometric_series",
+    "norm_bounds"
+  ],
+  "related_artifacts": [
+    "pro_1_002",
+    "pro_2_005"
+  ],
+  "computational_complexity": {
+    "convergence_iterations": "O(log(1/epsilon))",
+    "per_iteration_cost": "O(d*r)",
+    "total_tokens": "O(r * log(1/epsilon))"
+  }
+}

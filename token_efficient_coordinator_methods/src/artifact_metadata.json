@@ -1,0 +1,4 @@
+{
+  "title": "Token\u2011efficient Coordinator Methods",
+  "summary": "RIMs (sparse modular recurrence), TokenSqueeze (Long\u2192Short reasoning compression), and learned hierarchical context/latent compression (CCF) are the most relevant methods for token\u2011efficient multi\u2011LLM coordination [1, 2, 3]. The provided 200\u2011episode dataset enables per\u2011turn token accounting and training/evaluation of these methods, but no source presents an integrated end\u2011to\u2011end evaluation combining all three, so quantitative token\u2011savings estimates require running the recommended experiments; a proven rank\u2011bound constrains how compact coordinators can be without losing capacity [4, 5, 3]."
+}

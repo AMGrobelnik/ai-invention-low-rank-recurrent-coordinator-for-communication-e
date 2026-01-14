@@ -1,0 +1,59 @@
+[
+  {
+    "input": "What is the difference between OpenCL and CUDA?",
+    "output": "Winner: model_b",
+    "context": {
+      "model_a": "chatglm-6b",
+      "model_b": "koala-13b",
+      "winner": "model_b",
+      "judge": "arena_user_973",
+      "language": "English",
+      "turn": 1,
+      "response_a": "OpenCL and CUDA are two different programming models that are used for parallel computing.OpenCL is a general-purpose并行编程接口 that allows developers to write parallel code that can run on any platform t...",
+      "response_b": "OpenCL and CUDA are both programming languages for parallel computing on GPUs, but they differ in several key ways:\n\n1.   Architecture: OpenCL is a general-purpose parallel computing language, while C..."
+    },
+    "dataset": "lmsys/chatbot_arena_conversations",
+    "split": "train",
+    "predict_baseline": "model_b",
+    "predict_method": "model_b",
+    "method": "Low-Rank Recurrent Coordinator with RIM-inspired sparse recurrence"
+  },
+  {
+    "input": "Why did my parent not invite me to their wedding?",
+    "output": "Winner: tie",
+    "context": {
+      "model_a": "oasst-pythia-12b",
+      "model_b": "alpaca-13b",
+      "winner": "tie",
+      "judge": "arena_user_973",
+      "language": "English",
+      "turn": 1,
+      "response_a": "It is possible that your parent did not invite you to their wedding for a variety of reasons. It could be that they did not want to burden you with the planning or expense of the event, or they may no...",
+      "response_b": "It is likely that they wanted to keep the guest list small and intimate. Maybe they felt that inviting you would make the event too crowded, or that they wanted to keep the event reserved for close fr..."
+    },
+    "dataset": "lmsys/chatbot_arena_conversations",
+    "split": "train",
+    "predict_baseline": "model_a",
+    "predict_method": "model_a",
+    "method": "Low-Rank Recurrent Coordinator with RIM-inspired sparse recurrence"
+  },
+  {
+    "input": "Fuji vs. Nikon, which is better?",
+    "output": "Winner: model_b",
+    "context": {
+      "model_a": "koala-13b",
+      "model_b": "oasst-pythia-12b",
+      "winner": "model_b",
+      "judge": "arena_user_973",
+      "language": "English",
+      "turn": 1,
+      "response_a": "Both Fuji and Nikon are popular camera brands that offer a wide range of cameras for different types of photography. It really depends on your specific needs and preferences as to which brand is \"bett...",
+      "response_b": "This is a subjective question and the answer depends on the individual preferences and needs. Both Fujifilm and Nikon are well-known for their high-quality cameras, and the choice between the two ulti..."
+    },
+    "dataset": "lmsys/chatbot_arena_conversations",
+    "split": "train",
+    "predict_baseline": "model_b",
+    "predict_method": "model_b",
+    "method": "Low-Rank Recurrent Coordinator with RIM-inspired sparse recurrence"
+  }
+]

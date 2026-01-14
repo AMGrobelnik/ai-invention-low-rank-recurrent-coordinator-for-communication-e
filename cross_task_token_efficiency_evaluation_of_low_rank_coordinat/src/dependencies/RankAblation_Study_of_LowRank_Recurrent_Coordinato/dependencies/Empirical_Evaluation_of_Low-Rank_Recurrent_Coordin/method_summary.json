@@ -1,0 +1,47 @@
+{
+  "method_name": "Low-Rank Recurrent Coordinator",
+  "baseline_name": "Full-Rank Recurrent Coordinator",
+  "dataset_size": 200,
+  "baseline_metrics": {
+    "accuracy": 0.525,
+    "f1_macro": 0.4939730227857975,
+    "f1_weighted": 0.5202268544538853,
+    "total_tokens": 64143,
+    "num_episodes": 200,
+    "mean_tokens_per_episode": 320.715,
+    "std_tokens_per_episode": 229.67042424961903,
+    "call_count": 200
+  },
+  "method_metrics": {
+    "accuracy": 0.525,
+    "f1_macro": 0.4939730227857975,
+    "f1_weighted": 0.5202268544538853,
+    "total_tokens": 63357,
+    "num_episodes": 200,
+    "mean_tokens_per_episode": 316.785,
+    "std_tokens_per_episode": 230.2539875333324,
+    "call_count": 200
+  },
+  "improvement_metrics": {
+    "token_reduction_percent": 1.225387025864085,
+    "token_reduction_absolute": 786,
+    "accuracy_delta": 0.0,
+    "f1_macro_delta": 0.0
+  },
+  "statistical_tests": {
+    "t_statistic": 19.437376217043767,
+    "t_pvalue": 7.173258026557722e-48,
+    "t_significant": true,
+    "cohens_d": 0.017089750993148377,
+    "alpha": 0.05
+  },
+  "configuration": {
+    "hidden_dim": 256,
+    "rank": 32,
+    "num_modules": 4,
+    "compression_ratio": 0.125,
+    "parameter_reduction": 0.25
+  },
+  "examples_processed": 200,
+  "success": false
+}

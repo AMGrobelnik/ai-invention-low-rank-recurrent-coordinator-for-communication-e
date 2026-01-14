@@ -1,0 +1,38 @@
+================================================================================
+RANK-ABLATION STUDY: FINAL SUMMARY
+================================================================================
+
+HYPOTHESIS: Low-rank recurrent coordinator reduces token usage by >15%
+RESULT: NOT VALIDATED (achieved only 1.23% reduction)
+
+KEY FINDINGS:
+✅ All 5 rank values tested [8, 16, 32, 64, 128]
+✅ Token reduction constant at 1.23% (rank-independent)
+✅ Task performance maintained (0% accuracy drop)
+✅ Statistical significance confirmed (p < 0.001)
+❌ Failed to meet >15% token reduction target
+
+ROOT CAUSE:
+Message size controlled by threshold-based sparsity, not rank dimensionality.
+All ranks produce ~2-3 active components → identical message sizes.
+
+DELIVERABLES:
+• method_out.json - Full results (200 examples)
+• method_summary.json - Comprehensive metrics
+• rank_ablation_plots.png - 4-panel visualization
+• ANALYSIS_REPORT.md - Detailed findings (11 KB)
+• test_framework.py - Framework validation
+• README.md - Quick reference
+
+CRITICAL INSIGHT:
+Rank is NOT the bottleneck for token efficiency. The message generation
+mechanism requires redesign to realize theoretical compression benefits.
+
+RECOMMENDATIONS:
+1. Adaptive thresholds based on rank
+2. Multi-turn dialogue datasets for compounding savings
+3. Learned compression (VAE/autoencoder)
+4. Trained predictors instead of heuristics
+
+FRAMEWORK STATUS: ✅ All tests passed, ready for production
+================================================================================

@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "evaluation_date": "2026-01-14",
+    "method_evaluated": "Low-Rank Recurrent Coordinator",
+    "baseline": "Full-Rank Recurrent Coordinator",
+    "dataset": "lmsys/chatbot_arena_conversations",
+    "hypothesis": "Low-rank coordinator reduces token usage by >=20%",
+    "hypothesis_confirmed": false,
+    "configuration": {
+      "hidden_dim": 256,
+      "rank": 32,
+      "num_modules": 4,
+      "compression_ratio": 0.125,
+      "parameter_reduction": 0.25
+    }
+  },
+  "token_efficiency_analysis": {
+    "overall": {
+      "total_examples": 200,
+      "mean_savings_pct": 12.33072992364745,
+      "std_savings_pct": 11.352741434954737,
+      "median_savings_pct": 6.559938524590164,
+      "min_savings_pct": 6.093189964157706,
+      "max_savings_pct": 58.620689655172406,
+      "target_savings_pct": 20.0,
+      "achieved_target": false
+    }
+  },
+  "performance_analysis": {
+    "overall": {
+      "baseline": {
+        "accuracy": 0.525,
+        "f1_macro": 0.4939730227857975
+      },
+      "method": {
+        "accuracy": 0.525,
+        "f1_macro": 0.4939730227857975
+      },
+      "delta": {
+        "accuracy": 0.0,
+        "f1_macro": 0.0
+      },
+      "performance_maintained": true
+    }
+  },
+  "robustness_analysis": {
+    "prediction_agreement": {
+      "total_examples": 200,
+      "agreements": 200,
+      "disagreements": 0,
+      "agreement_rate": 1.0,
+      "high_consistency": true
+    }
+  },
+  "statistical_tests": {
+    "token_efficiency_tests": {
+      "paired_t_test": {
+        "t_statistic": 19.437376217043767,
+        "p_value": 7.173258026557722e-48,
+        "significant": true,
+        "alpha": 0.05
+      },
+      "effect_size": {
+        "cohens_d": 0.017089750993148377,
+        "magnitude": "negligible"
+      }
+    },
+    "performance_tests": {
+      "mcnemar_test": {
+        "statistic": 0.0,
+        "p_value": 1.0,
+        "significant": false
+      }
+    }
+  },
+  "conclusion": {
+    "hypothesis_confirmed": false,
+    "key_findings": [
+      "Token reduction: 12.33% (target: 20%)",
+      "Performance maintained: True",
+      "Robustness: High"
+    ],
+    "interpretation": "Comprehensive evaluation completed successfully.",
+    "recommendations": [
+      "Explore alternative compression strategies",
+      "Test with longer multi-turn interactions"
+    ]
+  }
+}
