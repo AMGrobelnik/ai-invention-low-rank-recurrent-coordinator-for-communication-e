@@ -2,6 +2,11 @@
 
 This repository contains artifacts from an AI-generated research project.
 
+## Research Paper
+
+[![Download PDF](https://img.shields.io/badge/Download-PDF-red)](https://github.com/AMGrobelnik/ai-invention-low-rank-recurrent-coordinator-for-communication-e/blob/main/paper.pdf) [![LaTeX Source](https://img.shields.io/badge/LaTeX-Source-orange)](https://github.com/AMGrobelnik/ai-invention-low-rank-recurrent-coordinator-for-communication-e/tree/main/paper) [![Figures](https://img.shields.io/badge/Figures-5-blue)](https://github.com/AMGrobelnik/ai-invention-low-rank-recurrent-coordinator-for-communication-e/tree/main/figures)
+
+
 ## Quick Start - Interactive Demos
 
 Click the badges below to open notebooks directly in Google Colab:
